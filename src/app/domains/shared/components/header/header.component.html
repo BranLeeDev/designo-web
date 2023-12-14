@@ -1,1 +1,32 @@
-<p>header works!</p>
+<header>
+  <h1>Designo</h1>
+  <div>
+    <div>
+      <nav>
+        <h2>Main Navigation</h2>
+        <div>
+          <a routerLink="/" aria-label="Designo logo">
+            <img
+              src="https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/DesignoWeb/Shared/ht8p1jxgzpwq3xffrwy1"
+              alt="Website logo"
+              width="202"
+              height="27"
+            />
+          </a>
+          <ul>
+            @for (route of routesList(); track route.id) {
+              <li>
+                <a [routerLink]="route.path">{{ route.label }}</a>
+              </li>
+            }
+          </ul>
+        </div>
+      </nav>
+      <button aria-label="Open navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
