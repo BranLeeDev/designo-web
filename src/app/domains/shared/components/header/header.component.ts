@@ -1,36 +1,23 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { Route } from '@models/route.model';
+import { NavigationMenuService } from '../../services/navigation-menu.service';
+import { MenuButtonComponent } from '../menu-button/menu-button.component';
+import { WebLogoComponent } from '../web-logo/web-logo.component';
+import { RoutesListComponent } from '../routes-list/routes-list.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterLink],
+  imports: [
+    RouterLink,
+    MenuButtonComponent,
+    WebLogoComponent,
+    RoutesListComponent,
+  ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  routesList = signal<Route[]>([
-    {
-      id: 1,
-      path: '/our-company',
-      label: 'Our Company',
-    },
-    {
-      id: 2,
-      path: '/locations',
-      label: 'Locations',
-    },
-    {
-      id: 3,
-      path: '/contact',
-      label: 'Contact',
-    },
-  ]);
-
-  isOpenNavigationMenu = signal<boolean>(false);
-
-  openNavigationMenu() {
-    this.isOpenNavigationMenu.update((preview) => !preview);
-  }
+  private navigationMenu = inject(NavigationMenuService);
+  isOpenNavigationMenu = this.navigationMenu.statusNavMenu;
 }

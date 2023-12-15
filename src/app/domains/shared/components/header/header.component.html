@@ -5,37 +5,14 @@
       <nav class="container-nav__nav">
         <h2 class="nav__title">Main Navigation</h2>
         <div class="nav__container-routes">
-          <a class="container-routes__router-link" routerLink="/" aria-label="Designo logo">
-            <img
-              class="router-link__image"
-              src="https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/DesignoWeb/Shared/ht8p1jxgzpwq3xffrwy1"
-              alt="Website logo"
-              width="202"
-              height="27"
-            />
-          </a>
+          <app-web-logo />
           <div class="container-routes__container-list" [class.container-routes__container-list--active]="isOpenNavigationMenu()">
-            <ul class="container-list__routes-list" >
-              @for (route of routesList(); track route.id) {
-                <li class="routes-list__item-route">
-                  <a class="item-route__router-link" [routerLink]="route.path">{{ route.label }}</a>
-                </li>
-              }
-            </ul>
+            <app-routes-list />
           </div>
         </div>
         <div class="nav__background" [class.nav__background--active]="isOpenNavigationMenu()"></div>
       </nav>
-      <button
-        class="container-nav__button"
-        [class.container-nav__button--active]="isOpenNavigationMenu()"
-        aria-label="Open navigation menu"
-        (click)="openNavigationMenu()"
-      >
-        <span class="button__line button__line--first"></span>
-        <span class="button__line button__line--second"></span>
-        <span class="button__line button__line--third"></span>
-      </button>
+      <app-menu-button />
     </div>
   </div>
 </header>
