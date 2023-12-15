@@ -27,4 +27,10 @@ export class HeaderComponent {
       label: 'Contact',
     },
   ]);
+
+  isOpenNavigationMenu = signal<boolean>(false);
+
+  openNavigationMenu() {
+    this.isOpenNavigationMenu.update((preview) => !preview);
+  }
 }
