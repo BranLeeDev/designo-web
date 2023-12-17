@@ -20,7 +20,7 @@ $secondary-color: #ffffff;
 
   &--active {
     position: relative;
-    color: #e7816be6;
+    color: #e7826b;
 
     &::after {
       content: "";
@@ -47,7 +47,7 @@ $secondary-color: #ffffff;
     font-size: 0.875rem;
 
     &--active {
-      color: #e7826b;
+      color: #a54439;
     }
   }
 }
