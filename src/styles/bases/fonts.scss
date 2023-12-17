@@ -2,9 +2,11 @@
   font-family: "Jost";
   src: url("../../assets/Jost/Jost-Medium.ttf")
     url("../../assets/Jost/Jost-Regular.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Spartan";
   src: url("../../assets/Spartan/Spartan-Bold.ttf") format("truetype");
+  font-display: swap;
 }
