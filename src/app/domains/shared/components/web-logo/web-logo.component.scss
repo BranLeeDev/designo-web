@@ -1,3 +1,69 @@
+@import "../../../../../styles/bases/variables.scss";
+
 .router-logo {
   display: inline-flex;
+  gap: 1em;
+
+  .router-logo__oval-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    background: conic-gradient(
+      from 90deg at 50% 50%,
+      rgba(231, 129, 107, 0) 0deg,
+      #e7816b 359.74345207214355deg
+    );
+    animation: rotation 2s infinite linear;
+  }
+
+  .router-logo__paragraph {
+    position: relative;
+    color: #333136;
+    font-family: "Spartan";
+    font-size: 1.5rem;
+    font-weight: map-get($weights, "bold");
+    letter-spacing: 0.1949em;
+    text-transform: uppercase;
+
+    &::before {
+      content: attr(data-logo-name);
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      width: 100%;
+      background: linear-gradient(
+        45deg,
+        rgba(231, 129, 107, 0) 45%,
+        rgba(231, 129, 107, 0.8) 50%,
+        rgba(231, 129, 107, 0) 55%,
+        rgba(231, 129, 107, 0) 100%
+      );
+      background-size: 200%;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 2s infinite linear;
+    }
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes shine {
+  from {
+    background-position: -100%;
+  }
+
+  to {
+    background-position: 100%;
+  }
 }
