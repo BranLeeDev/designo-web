@@ -20,6 +20,7 @@ $secondary-color: #ffffff;
 
   &--active {
     position: relative;
+    color: #e7816be6;
 
     &::after {
       content: "";
@@ -44,6 +45,10 @@ $secondary-color: #ffffff;
   .item-route__router-link {
     color: $primary-color;
     font-size: 0.875rem;
+
+    &--active {
+      color: #e7826b;
+    }
   }
 }
 
@@ -67,6 +72,12 @@ $secondary-color: #ffffff;
 
     &:hover::before {
       transform: scaleX(1);
+    }
+
+    &--active {
+      &::before {
+        display: none;
+      }
     }
   }
 }
