@@ -4,17 +4,29 @@
   display: inline-flex;
   gap: 1em;
 
+  &--active {
+    .router-logo__oval-icon {
+      animation: rotation 2s infinite linear;
+    }
+
+    .router-logo__paragraph {
+      &::before {
+        animation: shine 2s infinite linear;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
   .router-logo__oval-icon {
     display: inline-block;
     width: 1.5em;
     height: 1.5em;
     border-radius: 50%;
     background: conic-gradient(
-      from 90deg at 50% 50%,
-      rgba(231, 129, 107, 0) 0deg,
-      #e7816b 359.74345207214355deg
+      from 0deg at 50% 50%,
+      #e7816b 0deg,
+      rgba(231, 129, 107, 0) 360deg
     );
-    animation: rotation 2s infinite linear;
   }
 
   .router-logo__paragraph {
@@ -42,19 +54,17 @@
       );
       background-size: 200%;
       background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: shine 2s infinite linear;
     }
   }
 }
 
 @keyframes rotation {
   from {
-    transform: rotate(0turn);
+    transform: rotate(1turn);
   }
 
   to {
-    transform: rotate(1turn);
+    transform: rotate(0turn);
   }
 }
 

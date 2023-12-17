@@ -1,11 +1,11 @@
 import { Component, inject } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import { RoutesService } from '../../services/routes.service';
 
 @Component({
   selector: 'app-routes-list',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './routes-list.component.html',
   styleUrl: './routes-list.component.scss',
 })
