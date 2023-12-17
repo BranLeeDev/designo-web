@@ -5,6 +5,7 @@
         class="item-route__router-link"
         [routerLink]="route.path"
         routerLinkActive="item-route__router-link--active"
+        (click)="closeNavigationMenu()"
       >
         {{ route.label }}
       </a>

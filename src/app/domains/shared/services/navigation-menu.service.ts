@@ -9,4 +9,8 @@ export class NavigationMenuService {
   changeStatusNavMenu() {
     this.statusNavMenu.update((preview) => !preview);
   }
+
+  setFalseStatusNavMenu() {
+    this.statusNavMenu.set(false);
+  }
 }

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { NavigationMenuService } from '../../services/navigation-menu.service';
 
 @Component({
   selector: 'app-web-logo',
@@ -8,4 +9,10 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   templateUrl: './web-logo.component.html',
   styleUrl: './web-logo.component.scss',
 })
-export class WebLogoComponent {}
+export class WebLogoComponent {
+  private navigationMenu = inject(NavigationMenuService);
+
+  closeNavigationMenu() {
+    this.navigationMenu.setFalseStatusNavMenu();
+  }
+}
