@@ -1,13 +1,31 @@
 @font-face {
   font-family: "Jost";
-  src: local("Jost") url("../../assets/fonts/Jost/Jost-Medium.ttf")
+  src: local("Jost"), url("../../assets/fonts/Jost/Jost-Medium.ttf"),
     url("../../assets/fonts/Jost/Jost-Regular.ttf") format("truetype");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Spartan";
-  src: local("Spartan") url("../../assets/fonts/Spartan/Spartan-Bold.ttf")
-    format("truetype");
+  src: local("Spartan"),
+    url("../../assets/fonts/Spartan/Spartan-Bold.ttf") format("truetype");
   font-display: swap;
+}
+
+@font-face {
+  font-family: "Font Awesome 6 Brands";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Font Awesome 6 Brands"),
+    url("../../assets/fonts/FontAwesome/fa-brands-400.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: local("Font Awesome 6 Free"),
+    url("../../assets/fonts/FontAwesome/fa-solid-900.ttf") format("truetype");
 }
