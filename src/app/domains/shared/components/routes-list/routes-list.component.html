@@ -1,4 +1,10 @@
-<ul class="routes-list" >
+<ul
+  class="routes-list"
+  [ngClass]="{
+    'routes-list--header': isForHeader === true,
+    'routes-list--footer': isForHeader === false
+  }"
+>
   @for (route of routesList(); track route.id) {
     <li class="routes-list__item-route">
       <a

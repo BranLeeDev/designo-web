@@ -2,7 +2,7 @@
 @import "../../../../../styles/bases/mixins.scss";
 
 $transition-menu-nav: transform 0.25s ease-in-out;
-$top-side-menu: 6.4581em;
+$top-side-menu: 6.3331em;
 
 .header {
   width: 100%;
@@ -14,6 +14,7 @@ $top-side-menu: 6.4581em;
 
   .header__pos-fixed {
     position: fixed;
+    z-index: 10;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,6 +32,7 @@ $top-side-menu: 6.4581em;
 
   .container-nav__nav {
     display: flex;
+    justify-content: center;
     width: 100%;
 
     .nav__title {
@@ -40,6 +42,7 @@ $top-side-menu: 6.4581em;
     .nav__container-routes {
       display: flex;
       width: 100%;
+      max-width: $max-width;
 
       app-web-logo {
         display: inline-flex;

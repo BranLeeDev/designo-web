@@ -38,6 +38,10 @@
     letter-spacing: 0.1949em;
     text-transform: uppercase;
 
+    &--footer {
+      color: #ffffff;
+    }
+
     &::before {
       content: attr(data-logo-name);
       position: absolute;

@@ -1,0 +1,116 @@
+@import "../../../../../styles/bases/variables.scss";
+
+@mixin line {
+  width: 100%;
+  height: 0.06em;
+  background-color: #343334;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 4em 0;
+  background-color: #1d1c1e;
+
+  .footer__container {
+    width: 90%;
+    max-width: $max-width;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+
+    .container__navigation {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2em;
+    }
+
+    .container__info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2.5em;
+    }
+  }
+}
+
+.navigation__line {
+  @include line();
+}
+
+.info__social-list {
+  display: flex;
+  gap: 1.16em;
+  .social-list__social-media {
+    .social-media__link {
+      font-size: 1.5rem;
+      color: #e7816b;
+    }
+  }
+}
+
+.info__address {
+  color: #8f8e8f;
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 1.8;
+  text-align: center;
+}
+
+@media screen and (width >= $breakpoint-tablet) {
+  .footer {
+    .footer__container {
+      .container__navigation {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .container__line {
+        @include line();
+      }
+
+      .container__info {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .navigation__line {
+    display: none;
+  }
+
+  .info__address {
+    text-align: start;
+    &--contact {
+      font-weight: map-get($weights, "bold");
+    }
+  }
+
+  .info__social-list {
+    align-self: flex-end;
+  }
+}
+
+@media screen and (width >= $breakpoint-desktop) {
+  .info__social-list {
+    gap: 1.5em;
+
+    .social-list__social-media {
+      .social-media__link {
+        .link__icon {
+          transform: scale(1);
+          transition: transform 0.25s ease-in-out, color 0.25s ease-in-out;
+
+          &:hover {
+            transform: scale(1.3);
+            color: #ffad9b;
+          }
+        }
+      }
+    }
+  }
+}

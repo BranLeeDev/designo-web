@@ -7,5 +7,11 @@
   href="/"
 >
   <span class="router-logo__oval-icon"></span>
-  <span class="router-logo__paragraph" data-logo-name="Designo">Designo</span>
+  <span
+    class="router-logo__paragraph"
+    [class.router-logo__paragraph--footer]="isForHeader === false"
+    data-logo-name="Designo"
+  >
+    Designo
+  </span>
 </a>

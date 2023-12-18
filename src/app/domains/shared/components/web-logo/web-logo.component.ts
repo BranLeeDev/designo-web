@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NavigationMenuService } from '@services/navigation-menu.service';
 
@@ -10,6 +10,7 @@ import { NavigationMenuService } from '@services/navigation-menu.service';
   styleUrl: './web-logo.component.scss',
 })
 export class WebLogoComponent {
+  @Input() isForHeader = true;
   private navigationMenu = inject(NavigationMenuService);
 
   closeNavigationMenu() {
