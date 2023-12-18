@@ -1,6 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { SeoService } from '@services/seo.service';
+import { MetatagsService } from '@services/metatags.service';
 
 @Component({
   selector: 'app-our-company',
@@ -11,14 +11,14 @@ import { SeoService } from '@services/seo.service';
 })
 export class OurCompanyComponent implements OnInit {
   private title = inject(Title);
-  private seo = inject(SeoService);
+  private metaTagsService = inject(MetatagsService);
 
   ngOnInit(): void {
     const t = 'Our Company | Designo';
 
     this.title.setTitle(t);
 
-    this.seo.generateTags({
+    this.metaTagsService.updateMetaTags({
       title: t,
       description:
         'Creative agency crafting impactful designs that connect with audiences. Partnering with startups, corporations, and nonprofits since 2010',

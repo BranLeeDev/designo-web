@@ -5,10 +5,10 @@ import { TagsConfig } from '@models/tags-config.model';
 @Injectable({
   providedIn: 'root',
 })
-export class SeoService {
+export class MetatagsService {
   private meta = inject(Meta);
 
-  generateTags(config: TagsConfig) {
+  updateMetaTags(config: TagsConfig) {
     this.meta.updateTag({
       name: 'description',
       content: config.description,
