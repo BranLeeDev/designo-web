@@ -1,15 +1,15 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { SeoService } from '../../shared/services/seo.service';
+import { SeoService } from '../../../shared/services/seo.service';
 
 @Component({
-  selector: 'app-designo-contact',
+  selector: 'app-contact',
   standalone: true,
   imports: [],
-  templateUrl: './designo-contact.component.html',
-  styleUrl: './designo-contact.component.scss',
+  templateUrl: './contact.component.html',
+  styleUrl: './contact.component.scss',
 })
-export class DesignoContactComponent implements OnInit {
+export class ContactComponent implements OnInit {
   private title = inject(Title);
   private seo = inject(SeoService);
 

@@ -9,28 +9,30 @@ export const routes: Routes = [
       {
         path: '',
         loadComponent: () =>
-          import('./domains/home/designo-home/designo-home.component'),
+          import('./domains/home/pages/home/home.component').then(
+            (m) => m.HomeComponent
+          ),
       },
       {
         path: 'our-company',
         loadComponent: () =>
           import(
-            './domains/our-company/designo-about/designo-about.component'
-          ).then((m) => m.DesignoAboutComponent),
+            './domains/our-company/pages/our-company/our-company.component'
+          ).then((m) => m.OurCompanyComponent),
       },
       {
         path: 'locations',
         loadComponent: () =>
           import(
-            './domains/locations/designo-locations/designo-locations.component'
-          ).then((m) => m.DesignoLocationsComponent),
+            './domains/locations/pages/locations/locations.component'
+          ).then((m) => m.LocationsComponent),
       },
       {
         path: 'contact',
         loadComponent: () =>
-          import(
-            './domains/contact-us/designo-contact/designo-contact.component'
-          ).then((m) => m.DesignoContactComponent),
+          import('./domains/contact-us/pages/contact/contact.component').then(
+            (m) => m.ContactComponent
+          ),
       },
     ],
   },

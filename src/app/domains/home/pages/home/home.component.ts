@@ -1,15 +1,15 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { SeoService } from '../../shared/services/seo.service';
+import { SeoService } from '../../../shared/services/seo.service';
 
 @Component({
-  selector: 'app-designo-home',
+  selector: 'app-home',
   standalone: true,
   imports: [],
-  templateUrl: './designo-home.component.html',
-  styleUrl: './designo-home.component.scss',
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.scss',
 })
-export default class DesignoHomeComponent implements OnInit {
+export class HomeComponent implements OnInit {
   title = inject(Title);
   seo = inject(SeoService);
 
