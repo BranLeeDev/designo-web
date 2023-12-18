@@ -1,0 +1,9 @@
+.container-image {
+  display: grid;
+  place-items: center;
+  padding: 7% 0;
+  .container-image__image {
+    width: 100%;
+    max-width: 37.5em;
+  }
+}
