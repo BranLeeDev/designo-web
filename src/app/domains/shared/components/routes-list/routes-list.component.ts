@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { RoutesService } from '../../services/routes.service';
-import { NavigationMenuService } from '../../services/navigation-menu.service';
+import { RoutesService } from '@services/routes.service';
+import { NavigationMenuService } from '@services/navigation-menu.service';
 
 @Component({
   selector: 'app-routes-list',

@@ -1,6 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { SeoService } from '../../../shared/services/seo.service';
+import { SeoService } from '@services/seo.service';
 
 @Component({
   selector: 'app-contact',

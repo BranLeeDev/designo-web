@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { NavigationMenuService } from '../../services/navigation-menu.service';
+import { NavigationMenuService } from '@services/navigation-menu.service';
 
 @Component({
   selector: 'app-menu-button',

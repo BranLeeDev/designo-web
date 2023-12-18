@@ -21,7 +21,8 @@
     "useDefineForClassFields": false,
     "lib": ["ES2022", "dom"],
     "paths": {
-      "@models/*": ["./src/app/domains/shared/models/*"]
+      "@models/*": ["./src/app/domains/shared/models/*"],
+      "@services/*": ["./src/app/domains/shared/services/*"]
     }
   },
   "angularCompilerOptions": {
