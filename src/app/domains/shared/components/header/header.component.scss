@@ -2,7 +2,7 @@
 @import "../../../../../styles/bases/mixins.scss";
 
 $transition-menu-nav: transform 0.25s ease-in-out;
-$top-side-menu: 6.3331em;
+$top-side-menu: 6.0031em;
 
 .header {
   width: 100%;
@@ -17,7 +17,7 @@ $top-side-menu: 6.3331em;
     z-index: 10;
     @include flex-col-center();
     width: 100%;
-    padding: 2.125em 0;
+    padding: 1.96em 0;
     background-color: #ffffff;
   }
 }
@@ -95,12 +95,8 @@ $top-side-menu: 6.3331em;
 
 @media screen and (width >= $breakpoint-tablet) {
   .header {
-    min-height: 9.8125em;
-    .header__pos-fixed {
-      margin: 1.875em 0;
-    }
+    min-height: 5.7325em;
   }
-
   .container-nav__nav {
     .nav__background {
       display: none;
