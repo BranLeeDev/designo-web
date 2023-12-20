@@ -1,10 +1,13 @@
-<article>
+<article class="culture-card">
   <img
+    class="culture-card__image"
     [ngSrc]="cultureCard.image.url"
     [alt]="cultureCard.image.alt"
     [width]="cultureCard.image.width"
     [height]="cultureCard.image.height"
   />
-  <h2>{{ cultureCard.title }}</h2>
-  <p>{{ cultureCard.description }}</p>
+  <div class="culture-card__container-text">
+    <h2 class="culture-card__title">{{ cultureCard.title }}</h2>
+    <p class="culture-card__paragraph">{{ cultureCard.description }}</p>
+  </div>
 </article>

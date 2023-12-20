@@ -27,6 +27,13 @@ app-introducing {
   gap: 1.5em;
 }
 
+.cards-list__cultures-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+  margin: 7.5em 0;
+}
+
 @media screen and (width >= $breakpoint-desktop) {
   .cards-list__portfolio-list {
     display: grid;
@@ -51,5 +58,10 @@ app-introducing {
         grid-area: graphic;
       }
     }
+  }
+
+  .cards-list__cultures-list {
+    flex-direction: row;
+    gap: 1.875em;
   }
 }
