@@ -1,0 +1,19 @@
+@keyframes rotation {
+  from {
+    transform: rotate(1turn);
+  }
+
+  to {
+    transform: rotate(0turn);
+  }
+}
+
+@keyframes shine {
+  from {
+    background-position: -100%;
+  }
+
+  to {
+    background-position: 100%;
+  }
+}

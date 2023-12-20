@@ -1,4 +1,5 @@
 @import "../bases/variables.scss";
+@import "../modules/animations.scss";
 
 $color-transition: color 0.25s ease-in-out;
 
@@ -43,6 +44,37 @@ $color-transition: color 0.25s ease-in-out;
 
     &:hover::before {
       transform: scaleX(1);
+    }
+  }
+
+  .scale-transition {
+    :nth-child(n) {
+      transition: transform 0.25s ease-in-out, color 0.25s ease-in-out;
+      transform: scale(1);
+    }
+
+    &:hover {
+      :nth-child(n) {
+        transform: scale(1.3);
+        color: #ffad9b;
+      }
+    }
+  }
+
+  .animated-logo {
+    &:hover {
+      &:not(.router-logo--active) {
+        .router-logo__oval-icon {
+          animation: rotation 2s infinite linear;
+        }
+
+        .router-logo__paragraph {
+          &::before {
+            animation: shine 2s infinite linear;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+      }
     }
   }
 

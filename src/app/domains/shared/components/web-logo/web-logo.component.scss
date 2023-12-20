@@ -1,4 +1,5 @@
 @import "../../../../../styles/bases/variables.scss";
+@import "../../../../../styles/modules/animations.scss";
 
 .router-logo {
   display: inline-flex;
@@ -59,44 +60,5 @@
       background-size: 200%;
       background-clip: text;
     }
-  }
-}
-
-@media screen and (width >= $breakpoint-desktop) {
-  .router-logo {
-    &:hover {
-      &:not(.router-logo--active) {
-        .router-logo__oval-icon {
-          animation: rotation 2s infinite linear;
-        }
-
-        .router-logo__paragraph {
-          &::before {
-            animation: shine 2s infinite linear;
-            -webkit-text-fill-color: transparent;
-          }
-        }
-      }
-    }
-  }
-}
-
-@keyframes rotation {
-  from {
-    transform: rotate(1turn);
-  }
-
-  to {
-    transform: rotate(0turn);
-  }
-}
-
-@keyframes shine {
-  from {
-    background-position: -100%;
-  }
-
-  to {
-    background-position: 100%;
   }
 }
