@@ -8,7 +8,9 @@
   @for (route of routesList(); track route.id) {
     <li class="routes-list__item-route">
       <a
-        class="item-route__router-link"
+        class="item-route__router-link horizontal-scale-transition"
+        [class.bg-jet-black-before]="isForHeader === true"
+        [class.bg-white-before]="isForHeader === false"
         [routerLink]="route.path"
         routerLinkActive="item-route__router-link--active"
         (click)="closeNavigationMenu()"

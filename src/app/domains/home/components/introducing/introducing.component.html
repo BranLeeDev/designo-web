@@ -1,36 +1,21 @@
-<section>
-  <div>
-    <div>
-      <div>
-        <h2>Award-winning custom designs and digital branding solutions</h2>
-        <p>
-          With over 10 years in the industry, we are experienced in creating
-          fully responsive websites, app design, and engaging brand experiences.
-          Find out more about our services.
-        </p>
-        <a href="#about">Learn more</a>
-      </div>
-      <img
-        ngSrc="/DesignoWeb/Home/uwsphta9qpoobqzlwmbx"
-        width="624"
-        height="913"
-        alt="Image hero phone"
-        priority
-      />
+<div class="introducing">
+  <div class="introducing__container">
+    <div class="container__container-data">
+      <h2 class="container-data__title">Award-winning custom designs and digital branding solutions</h2>
+      <p class="container-data__paragraph">
+        With over 10 years in the industry, we are experienced in creating fully
+        responsive websites, app design, and engaging brand experiences. Find out
+        more about our services.
+      </p>
+      <a class="container-data__button height-transition bg-coral-before txt-white-hov" href="#about">Learn more</a>
     </div>
-    <ul id="about">
-      @for (portfolioCard of portfoliosList(); track portfolioCard.id) {
-        <li>
-          <app-portfolio-card [portfolioCard]="portfolioCard" />
-        </li>
-      }
-    </ul>
-    <ul>
-      @for (cultureCard of culturesList(); track cultureCard.id) {
-        <li>
-          <app-culture-card [cultureCard]="cultureCard" />
-        </li>
-      }
-    </ul>
+    <img
+      class="container__image"
+      ngSrc="/DesignoWeb/Home/vumfvvsfptzxylq3rmw0"
+      width="624"
+      height="913"
+      alt="Image hero phone"
+      priority
+    />
   </div>
-</section>
+</div>

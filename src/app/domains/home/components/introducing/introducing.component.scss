@@ -1,0 +1,139 @@
+@import "../../../../../styles/bases/variables.scss";
+@import "../../../../../styles/bases/mixins.scss";
+
+.introducing {
+  position: relative;
+  z-index: 5;
+  @include flex-col-center;
+  width: 100%;
+  max-width: $max-width;
+  padding-top: 5em;
+  background-color: #e7816b;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 6.35em;
+    left: 0;
+    z-index: -5;
+    width: 40em;
+    height: 40em;
+    border-radius: 50%;
+    opacity: 0.3089;
+    background: linear-gradient(
+      0deg,
+      rgba(93, 2, 2, 0) 0%,
+      rgba(93, 2, 2, 0.5) 100%
+    );
+  }
+
+  .introducing__container {
+    position: relative;
+    width: 90%;
+    display: grid;
+    grid-template-rows: min-content 28em;
+    justify-items: center;
+  }
+}
+
+.container__container-data {
+  @include flex-col-center();
+  gap: 1.5em;
+
+  .container-data__title {
+    color: #ffffff;
+    text-align: center;
+    font-family: "Jost";
+    font-size: clamp(2rem, 1.286rem + 3.571vw, 3rem);
+    font-weight: map-get($weights, "medium");
+    line-height: 1.125;
+  }
+
+  .container-data__paragraph {
+    color: #fff;
+    text-align: center;
+    font-family: "Jost";
+    font-size: 0.9375rem;
+    font-weight: map-get($weights, "regular");
+    line-height: 1.667;
+  }
+
+  .container-data__button {
+    padding: 1.134em 1.64em;
+    background: #fff;
+    border-radius: 0.5em;
+    color: #333136;
+    font-family: "Jost";
+    font-size: 0.9375rem;
+    font-weight: map-get($weights, "medium");
+    letter-spacing: 0.0625em;
+    text-transform: uppercase;
+  }
+}
+
+.container__image {
+  position: absolute;
+  z-index: -5;
+  bottom: -22.1em;
+  object-fit: cover;
+  object-position: top center;
+}
+
+@media screen and (width >= $breakpoint-tablet) {
+  .introducing {
+    width: 90%;
+    margin-top: 2em;
+    border-radius: 0.9375em;
+
+    &::before {
+      top: 7.7em;
+      left: 10em;
+    }
+
+    .introducing__container {
+      width: 69%;
+    }
+  }
+
+  .container__container-data {
+    .container-data__paragraph {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media screen and (width >= $breakpoint-desktop) {
+  .introducing {
+    padding: 9.0625em 0;
+    &::before {
+      top: 0;
+      left: 29.5em;
+    }
+
+    .introducing__container {
+      width: 90%;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+    }
+  }
+
+  .container__container-data {
+    width: 100%;
+    align-items: flex-start;
+
+    .container-data__title {
+      text-align: start;
+    }
+
+    .container-data__paragraph {
+      text-align: start;
+    }
+  }
+
+  .container__image {
+    right: -8.7em;
+    bottom: -25em;
+    object-fit: contain;
+  }
+}

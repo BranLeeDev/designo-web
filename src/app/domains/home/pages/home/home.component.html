@@ -1,1 +1,21 @@
-<app-introducing />
+<section>
+  <div>
+    <app-introducing />
+    <div>
+      <ul id="about">
+        @for (portfolioCard of portfoliosList(); track portfolioCard.id) {
+          <li>
+            <app-portfolio-card [portfolioCard]="portfolioCard" />
+          </li>
+        }
+      </ul>
+      <ul>
+        @for (cultureCard of culturesList(); track cultureCard.id) {
+          <li>
+            <app-culture-card [cultureCard]="cultureCard" />
+          </li>
+        }
+      </ul>
+    </div>
+  </div>
+</section>
