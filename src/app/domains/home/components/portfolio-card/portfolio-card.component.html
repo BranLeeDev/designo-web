@@ -1,21 +1,26 @@
-<article>
-  <h3>{{ portfolioCard.title }}</h3>
-  <a href="/">
-    <span>View Projects</span>
-    <i class="fa-solid fa-chevron-right"></i>
+<article class="portfolio-card scale-up">
+  <h3 class="portfolio-card__title">{{ portfolioCard.title }}</h3>
+  <a class="portfolio-card__link slide-right-transition" href="/">
+    <span class="link__name">View Projects</span>
+    <i class="fa-solid fa-chevron-right link__icon"></i>
   </a>
-  <picture>
+  <picture class="portfolio-card__picture">
     <source
+      class="picture__source"
       [srcset]="portfolioCard.images.desktop"
       media="(width >= 90em)"
     />
     <source
+      class="picture__source"
       [srcset]="portfolioCard.images.tablet"
       media="(width >= 48em)"
     />
     <img
+      class="picture__image"
       [srcset]="portfolioCard.images.mobile"
       [alt]="portfolioCard.images.alt"
+      width="327"
+      height="250"
       loading="lazy"
     />
   </picture>

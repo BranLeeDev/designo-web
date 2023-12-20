@@ -1,17 +1,17 @@
-<section>
-  <div>
+<section class="section section--home">
+  <div class="section__container-data">
     <app-introducing />
-    <div>
-      <ul id="about">
+    <div class="container-data__cards-list">
+      <ul class="cards-list__portfolio-list" id="about">
         @for (portfolioCard of portfoliosList(); track portfolioCard.id) {
-          <li>
+          <li class="portfolio-list__portfolio-card">
             <app-portfolio-card [portfolioCard]="portfolioCard" />
           </li>
         }
       </ul>
-      <ul>
+      <ul class="cards-list__cultures-list">
         @for (cultureCard of culturesList(); track cultureCard.id) {
-          <li>
+          <li class="cultures-list__culture-card">
             <app-culture-card [cultureCard]="cultureCard" />
           </li>
         }

@@ -1,5 +1,55 @@
+@import "../../../../../styles/bases/variables.scss";
 @import "../../../../../styles/bases/mixins.scss";
+
+#about {
+  scroll-margin-top: 10em;
+}
 
 app-introducing {
   @include flex-col-center();
+  width: 100%;
+}
+
+.section--home {
+  .section__container-data {
+    @include flex-col-center();
+    .container-data__cards-list {
+      width: 90%;
+      max-width: $max-width;
+      margin-top: 7.5em;
+    }
+  }
+}
+
+.cards-list__portfolio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+@media screen and (width >= $breakpoint-desktop) {
+  .cards-list__portfolio-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 1.875em;
+    grid-template-areas:
+      "web app"
+      "web graphic";
+
+    .portfolio-list__portfolio-card {
+      &:nth-of-type(1) {
+        grid-area: web;
+        height: 40em;
+      }
+
+      &:nth-of-type(2) {
+        grid-area: app;
+      }
+
+      &:nth-of-type(3) {
+        grid-area: graphic;
+      }
+    }
+  }
 }
