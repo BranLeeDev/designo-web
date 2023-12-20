@@ -1,11 +1,12 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { MetatagsService } from '@services/metatags.service';
+import { IntroducingComponent } from '../../components/introducing/introducing.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [IntroducingComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

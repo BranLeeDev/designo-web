@@ -1,1 +1,22 @@
-<p>portfolio-card works!</p>
+<article>
+  <h3>{{ portfolioCard.title }}</h3>
+  <a href="/">
+    <span>View Projects</span>
+    <i class="fa-solid fa-chevron-right"></i>
+  </a>
+  <picture>
+    <source
+      [srcset]="portfolioCard.images.desktop"
+      media="(width >= 90em)"
+    />
+    <source
+      [srcset]="portfolioCard.images.tablet"
+      media="(width >= 48em)"
+    />
+    <img
+      [srcset]="portfolioCard.images.mobile"
+      [alt]="portfolioCard.images.alt"
+      loading="lazy"
+    />
+  </picture>
+</article>
