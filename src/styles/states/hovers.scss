@@ -1,0 +1,80 @@
+@import "../bases/variables.scss";
+
+$color-transition: color 0.25s ease-in-out;
+
+@media screen and (width >= $breakpoint-desktop) {
+  .height-transition {
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -5;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0%;
+      transition: height 0.25s ease-in-out;
+    }
+
+    &:hover {
+      &::before {
+        height: 100%;
+      }
+    }
+  }
+
+  .horizontal-scale-transition {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: inline-block;
+      width: 100%;
+      height: 2px;
+      transform: scaleX(0);
+      transition: transform 0.25s ease-in-out;
+    }
+
+    &:hover::before {
+      transform: scaleX(1);
+    }
+  }
+
+  .bg-jet-black-before {
+    &::before {
+      background-color: #333136 !important;
+    }
+  }
+
+  .bg-coral-before {
+    &::before {
+      background-color: #ffad9b !important;
+    }
+  }
+
+  .bg-white-before {
+    &::before {
+      background-color: #ffffff !important;
+    }
+  }
+
+  .txt-white-hov {
+    transition: $color-transition;
+    &:hover {
+      color: #ffffff !important;
+    }
+  }
+
+  .txt-coral-hov {
+    transition: $color-transition;
+    &:hover {
+      color: #ffad9b !important;
+    }
+  }
+}

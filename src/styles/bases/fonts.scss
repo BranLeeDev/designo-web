@@ -1,8 +1,17 @@
 @font-face {
   font-family: "Jost";
-  src: local("Jost"), url("../../assets/fonts/Jost/Jost-Medium.ttf"),
+  src: local("Jost"),
     url("../../assets/fonts/Jost/Jost-Regular.ttf") format("truetype");
   font-display: swap;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Jost";
+  src: local("Jost"),
+    url("../../assets/fonts/Jost/Jost-Medium.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 500;
 }
 
 @font-face {
@@ -10,6 +19,7 @@
   src: local("Spartan"),
     url("../../assets/fonts/Spartan/Spartan-Bold.ttf") format("truetype");
   font-display: swap;
+  font-weight: 700;
 }
 
 @font-face {
