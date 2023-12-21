@@ -2,22 +2,10 @@
 @import "../../../../../styles/bases/variables.scss";
 
 .footer {
-  position: relative;
   @include flex-col-center();
   width: 100%;
   padding: 4em 0;
   background-color: #1d1c1e;
-
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: -2;
-    top: -12em;
-    left: 0;
-    width: 100%;
-    height: 13em;
-    background-color: #1d1c1e;
-  }
 
   .footer__container {
     width: 90%;
