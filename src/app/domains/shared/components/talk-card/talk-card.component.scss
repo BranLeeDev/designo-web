@@ -1,0 +1,100 @@
+@import "../../../../../styles/bases/variables.scss";
+@import "../../../../../styles/bases/mixins.scss";
+
+.talk-card {
+  @include flex-col-center();
+  width: 90%;
+  max-width: $max-width;
+  border-radius: 0.9375em;
+  background-color: #e7816b;
+  overflow: hidden;
+}
+
+.talk-card__container-data {
+  @include flex-col-center();
+  gap: 2em;
+  padding: 4em 0;
+  width: 90%;
+
+  .container-data__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    .container__title {
+      color: #fff;
+      text-align: center;
+      font-family: "Jost";
+      font-size: clamp(2rem, -0.909rem + 14.545vw, 2.5rem);
+      line-height: 1;
+      font-weight: map-get($weights, "medium");
+    }
+
+    .container__description {
+      position: relative;
+      z-index: 5;
+      color: #fff;
+      text-align: center;
+      font-family: "Jost";
+      font-size: 1rem;
+      font-weight: map-get($weights, "regular");
+      line-height: 1.63;
+    }
+  }
+
+  .container-data__button {
+    z-index: 10;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 10.14em;
+    height: 3.75em;
+    border-radius: 0.5em;
+    background-color: #fff;
+    color: #333136;
+    font-family: "Jost";
+    font-size: 0.9375rem;
+    font-weight: map-get($weights, "medium");
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (width >= $breakpoint-tablet) {
+  .talk-card__container-data {
+    padding: 3.5625em 0;
+
+    .container-data__container {
+      @include flex-col-center();
+      .container__title {
+        width: 42%;
+      }
+
+      .container__description {
+        width: 68%;
+      }
+    }
+  }
+}
+
+@media screen and (width >= $breakpoint-desktop) {
+  .talk-card__container-data {
+    width: 80%;
+    padding: 4.5em 0;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .container-data__container {
+      align-items: flex-start;
+
+      .container__title {
+        text-align: start;
+      }
+
+      .container__description {
+        text-align: start;
+        width: 57%;
+      }
+    }
+  }
+}

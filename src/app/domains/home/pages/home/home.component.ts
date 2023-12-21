@@ -5,11 +5,17 @@ import { IntroducingComponent } from '../../components/introducing/introducing.c
 import { CultureCard, PortfolioCard } from '@models/cards.model';
 import { CultureCardComponent } from '../../components/culture-card/culture-card.component';
 import { PortfolioCardComponent } from '../../components/portfolio-card/portfolio-card.component';
+import { TalkCardComponent } from '../../../shared/components/talk-card/talk-card.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [IntroducingComponent, CultureCardComponent, PortfolioCardComponent],
+  imports: [
+    IntroducingComponent,
+    CultureCardComponent,
+    PortfolioCardComponent,
+    TalkCardComponent,
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

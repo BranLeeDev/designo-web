@@ -10,6 +10,11 @@ app-introducing {
   width: 100%;
 }
 
+app-talk-card {
+  @include flex-col-center();
+  width: 100%;
+}
+
 .section--home {
   .section__container-data {
     @include flex-col-center();

@@ -1,0 +1,148 @@
+@import "../bases/variables.scss";
+
+@mixin oval {
+  content: "";
+  position: absolute;
+  z-index: -5;
+  display: inline-block;
+  width: 18.25em;
+  height: 18.25em;
+  border-radius: 50%;
+  opacity: 0.3089;
+  font-size: 1rem;
+}
+
+.small-oval-before--first {
+  position: relative;
+  z-index: 5;
+
+  &::before {
+    @include oval();
+    bottom: -3.5em;
+    right: -1.5em;
+    background: linear-gradient(
+      0.2turn,
+      rgba(93, 2, 2, 0) 0%,
+      rgba(93, 2, 2, 0.5) 100%
+    );
+  }
+}
+
+.small-oval-before--second {
+  position: relative;
+  z-index: 5;
+
+  &::before {
+    @include oval();
+    top: 2.5em;
+    right: -2em;
+    background: linear-gradient(
+      0.25turn,
+      rgba(93, 2, 2, 0) 0%,
+      rgba(93, 2, 2, 0.5) 100%
+    );
+  }
+}
+
+.small-oval-after--third {
+  position: relative;
+  z-index: 5;
+
+  &::after {
+    @include oval();
+    top: 8em;
+    left: -16em;
+    background: linear-gradient(
+      0.37turn,
+      rgba(93, 2, 2, 0) 0%,
+      rgba(93, 2, 2, 0.5) 100%
+    );
+  }
+}
+
+@media screen and (width >= $breakpoint-tablet) {
+  .small-oval-before--first {
+    &::before {
+      bottom: -2.5em;
+      right: -4.5em;
+    }
+  }
+
+  .small-oval-before--second {
+    &::before {
+      top: 1.3em;
+      right: -1em;
+    }
+
+    &::after {
+      @include oval();
+      top: 1.3em;
+      right: -19.3em;
+      background: linear-gradient(
+        0.03turn,
+        rgba(93, 2, 2, 0) 0%,
+        rgba(93, 2, 2, 0.5) 100%
+      );
+    }
+  }
+
+  .small-oval-after--third {
+    &::after {
+      left: -2.7em;
+      background: linear-gradient(
+        0.5turn,
+        rgba(93, 2, 2, 0) 0%,
+        rgba(93, 2, 2, 0.5) 100%
+      );
+    }
+  }
+}
+
+@media screen and (width >= $breakpoint-desktop) {
+  .small-oval-before--first {
+    &::before {
+      bottom: -0.5em;
+      right: -25.5em;
+      background: linear-gradient(
+        0.16turn,
+        rgba(93, 2, 2, 0) 0%,
+        rgba(93, 2, 2, 0.5) 100%
+      );
+    }
+  }
+
+  .small-oval-before--second {
+    &::before {
+      top: -1.7em;
+      right: -1em;
+      background: linear-gradient(
+        0.5turn,
+        rgba(93, 2, 2, 0) 0%,
+        rgba(93, 2, 2, 0.5) 100%
+      );
+    }
+
+    &::after {
+      top: -0.5em;
+      right: -19em;
+      background: linear-gradient(
+        0.34turn,
+        rgba(93, 2, 2, 0) 0%,
+        rgba(93, 2, 2, 0.5) 100%
+      );
+    }
+  }
+
+  .small-oval-after--third {
+    &::after {
+      top: 5em;
+      left: auto;
+      right: -18em;
+      background: linear-gradient(
+        1turn,
+        rgba(93, 2, 2, 0) 0%,
+        rgba(93, 2, 2, 0.5) 100%
+      );
+    }
+  }
+}
