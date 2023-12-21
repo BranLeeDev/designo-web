@@ -18,15 +18,12 @@ $top-side-menu: 6.0031em;
     @include flex-col-center();
     width: 100%;
     padding: 1.96em 0;
-    background-color: #ffffff;
+    background-color: $secondary-color;
   }
 }
 
 .pos-fixed__container-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
+  @include flex-between-center(90%);
   max-width: $max-width;
 }
 
@@ -60,7 +57,7 @@ $top-side-menu: 6.0031em;
 
     &--active {
       left: 0;
-      background-color: #00000080;
+      background-color: $nav-background;
       transform: scale(1);
     }
   }

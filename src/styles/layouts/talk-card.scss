@@ -1,16 +1,5 @@
+@import "../bases/mixins.scss";
 @import "../bases/variables.scss";
-
-@mixin oval {
-  content: "";
-  position: absolute;
-  z-index: -5;
-  display: inline-block;
-  width: 18.25em;
-  height: 18.25em;
-  border-radius: 50%;
-  opacity: 0.3089;
-  font-size: 1rem;
-}
 
 .small-oval-before--first {
   position: relative;
@@ -20,11 +9,7 @@
     @include oval();
     bottom: -3.5em;
     right: -1.5em;
-    background: linear-gradient(
-      0.2turn,
-      rgba(93, 2, 2, 0) 0%,
-      rgba(93, 2, 2, 0.5) 100%
-    );
+    @include linear-gradient-oval(0.2turn);
   }
 }
 
@@ -36,11 +21,7 @@
     @include oval();
     top: 2.5em;
     right: -2em;
-    background: linear-gradient(
-      0.25turn,
-      rgba(93, 2, 2, 0) 0%,
-      rgba(93, 2, 2, 0.5) 100%
-    );
+    @include linear-gradient-oval(0.25turn);
   }
 }
 
@@ -52,11 +33,7 @@
     @include oval();
     top: 8em;
     left: -16em;
-    background: linear-gradient(
-      0.37turn,
-      rgba(93, 2, 2, 0) 0%,
-      rgba(93, 2, 2, 0.5) 100%
-    );
+    @include linear-gradient-oval(0.37turn);
   }
 }
 
@@ -78,22 +55,14 @@
       @include oval();
       top: 1.3em;
       right: -19.3em;
-      background: linear-gradient(
-        0.03turn,
-        rgba(93, 2, 2, 0) 0%,
-        rgba(93, 2, 2, 0.5) 100%
-      );
+      @include linear-gradient-oval(0.03turn);
     }
   }
 
   .small-oval-after--third {
     &::after {
       left: -2.7em;
-      background: linear-gradient(
-        0.5turn,
-        rgba(93, 2, 2, 0) 0%,
-        rgba(93, 2, 2, 0.5) 100%
-      );
+      @include linear-gradient-oval(0.5turn);
     }
   }
 }
@@ -103,11 +72,7 @@
     &::before {
       bottom: -0.5em;
       right: -25.5em;
-      background: linear-gradient(
-        0.16turn,
-        rgba(93, 2, 2, 0) 0%,
-        rgba(93, 2, 2, 0.5) 100%
-      );
+      @include linear-gradient-oval(0.16turn);
     }
   }
 
@@ -115,21 +80,13 @@
     &::before {
       top: -1.7em;
       right: -1em;
-      background: linear-gradient(
-        0.5turn,
-        rgba(93, 2, 2, 0) 0%,
-        rgba(93, 2, 2, 0.5) 100%
-      );
+      @include linear-gradient-oval(0.5turn);
     }
 
     &::after {
       top: -0.5em;
       right: -19em;
-      background: linear-gradient(
-        0.34turn,
-        rgba(93, 2, 2, 0) 0%,
-        rgba(93, 2, 2, 0.5) 100%
-      );
+      @include linear-gradient-oval(0.5turn);
     }
   }
 
@@ -138,11 +95,7 @@
       top: 5em;
       left: auto;
       right: -18em;
-      background: linear-gradient(
-        1turn,
-        rgba(93, 2, 2, 0) 0%,
-        rgba(93, 2, 2, 0.5) 100%
-      );
+      @include linear-gradient-oval(1turn);
     }
   }
 }

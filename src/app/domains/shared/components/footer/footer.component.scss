@@ -5,7 +5,7 @@
   @include flex-col-center();
   width: 100%;
   padding: 4em 0;
-  background-color: #1d1c1e;
+  background-color: $bg-footer;
 
   .footer__container {
     width: 90%;
@@ -36,17 +36,14 @@
   .social-list__social-media {
     .social-media__link {
       font-size: 1.5rem;
-      color: #e7816b;
+      color: $primary-color;
     }
   }
 }
 
 .info__address {
-  color: #8f8e8f;
-  font-size: 1rem;
+  @include typography($color-footer, 1rem, 1.8, center);
   font-style: normal;
-  line-height: 1.8;
-  text-align: center;
 }
 
 @media screen and (width >= $breakpoint-tablet) {

@@ -25,7 +25,7 @@
     border-radius: 50%;
     background: conic-gradient(
       from 0deg at 50% 50%,
-      #e7816b 0deg,
+      $primary-color 0deg,
       rgba(231, 129, 107, 0) 360deg
     );
   }

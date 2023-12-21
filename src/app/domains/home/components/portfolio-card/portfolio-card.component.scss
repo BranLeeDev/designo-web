@@ -1,11 +1,10 @@
 @import "../../../../../styles/bases/variables.scss";
+@import "../../../../../styles/bases/mixins.scss";
 
 .portfolio-card {
   position: relative;
   z-index: 5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex-col-center();
   justify-content: center;
   gap: 0.75em;
   width: 100%;
@@ -21,16 +20,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: $nav-background;
   }
 
   .portfolio-card__title {
-    color: hsl(0, 0%, 100%);
-    text-align: center;
-    font-family: "Jost";
-    font-size: 1.75rem;
+    @include typography($secondary-color, 1.75rem, 1.286, center);
     font-weight: map-get($weights, "medium");
-    line-height: 1.286;
     letter-spacing: 1.4px;
   }
 
@@ -38,16 +33,14 @@
     display: inline-flex;
     align-items: center;
     gap: 1em;
-    color: #fff;
-    font-family: "Jost";
-    font-size: 0.9375rem;
+    @include typography($secondary-color, 0.9375rem, 1, center);
     font-weight: map-get($weights, "medium");
     letter-spacing: 0.3125em;
     text-transform: uppercase;
 
     .link__icon {
       font-size: 0.75rem;
-      color: #e7816b;
+      color: $primary-color;
     }
   }
 

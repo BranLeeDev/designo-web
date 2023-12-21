@@ -8,7 +8,7 @@
   width: 100%;
   max-width: $max-width;
   padding-top: 5em;
-  background-color: #e7816b;
+  background-color: $primary-color;
   overflow: hidden;
 
   &::before {
@@ -21,11 +21,7 @@
     height: 40em;
     border-radius: 50%;
     opacity: 0.3089;
-    background: linear-gradient(
-      0deg,
-      rgba(93, 2, 2, 0) 0%,
-      rgba(93, 2, 2, 0.5) 100%
-    );
+    @include linear-gradient-oval(0deg);
   }
 
   .introducing__container {
@@ -42,30 +38,25 @@
   gap: 1.5em;
 
   .container-data__title {
-    color: #ffffff;
-    text-align: center;
-    font-family: "Jost";
-    font-size: clamp(2rem, 1.286rem + 3.571vw, 3rem);
+    $clamp-size: clamp(2rem, 1.286rem + 3.571vw, 3rem);
+    @include typography($secondary-color, $clamp-size, 1.125, center);
     font-weight: map-get($weights, "medium");
-    line-height: 1.125;
   }
 
   .container-data__paragraph {
-    color: #fff;
-    text-align: center;
-    font-family: "Jost";
-    font-size: 0.9375rem;
+    @include typography($secondary-color, 0.9375rem, 1.667, center);
     font-weight: map-get($weights, "regular");
-    line-height: 1.667;
   }
 
   .container-data__button {
-    padding: 1.134em 1.64em;
-    background: #fff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 9.5em;
+    height: 3.5em;
+    background: $secondary-color;
     border-radius: 0.5em;
-    color: #333136;
-    font-family: "Jost";
-    font-size: 0.9375rem;
+    @include typography($third-color, 0.9375rem, 1, center);
     font-weight: map-get($weights, "medium");
     letter-spacing: 0.0625em;
     text-transform: uppercase;

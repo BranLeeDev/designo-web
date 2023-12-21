@@ -1,8 +1,6 @@
 @import "../bases/variables.scss";
 @import "../modules/animations.scss";
 
-$color-transition: color 0.25s ease-in-out;
-
 @media screen and (width >= $breakpoint-desktop) {
   .height-transition {
     position: relative;
@@ -102,7 +100,7 @@ $color-transition: color 0.25s ease-in-out;
       top: 0;
       width: 0;
       height: 100%;
-      background-color: #ffad9b;
+      background-color: $color-transition;
       border-radius: inherit;
       transition: width 0.25s ease-in-out;
     }
@@ -121,7 +119,7 @@ $color-transition: color 0.25s ease-in-out;
       left: 0;
       width: 0;
       height: 0;
-      background-color: rgb(231, 129, 107, 0.7);
+      background-color: $bg-scale-up;
       transition: width 0.25s ease-in-out, height 0.25s ease-in-out;
     }
 
@@ -135,33 +133,33 @@ $color-transition: color 0.25s ease-in-out;
 
   .bg-jet-black-before {
     &::before {
-      background-color: #333136 !important;
+      background-color: $third-color !important;
     }
   }
 
   .bg-coral-before {
     &::before {
-      background-color: #ffad9b !important;
+      background-color: $color-transition !important;
     }
   }
 
   .bg-white-before {
     &::before {
-      background-color: #ffffff !important;
+      background-color: $secondary-color !important;
     }
   }
 
   .txt-white-hov {
-    transition: $color-transition;
+    transition: color 0.25s ease-in-out;
     &:hover {
-      color: #ffffff !important;
+      color: $secondary-color !important;
     }
   }
 
   .txt-coral-hov {
-    transition: $color-transition;
+    transition: color 0.25s ease-in-out;
     &:hover {
-      color: #ffad9b !important;
+      color: $color-transition !important;
     }
   }
 }

@@ -1,6 +1,5 @@
+@import "../../../../../styles/bases/mixins.scss";
 @import "../../../../../styles/bases/variables.scss";
-
-$primary-color: #333136;
 
 .routes-list {
   display: flex;
@@ -21,16 +20,14 @@ $primary-color: #333136;
 
 .routes-list__item-route {
   .item-route__router-link {
-    color: #ffffff;
-    font-size: 1.5rem;
+    @include typography($secondary-color, 1.5rem, 1.05, start);
     font-weight: map-get($weights, "regular");
-    line-height: 1.05;
     letter-spacing: 0.085em;
     text-transform: uppercase;
 
     &--active {
       position: relative;
-      color: #e7826b;
+      color: $color-router-active-header;
 
       &::after {
         content: "";
@@ -40,7 +37,7 @@ $primary-color: #333136;
         display: inline-block;
         width: 100%;
         height: 2px;
-        background-color: $primary-color;
+        background-color: $third-color;
       }
     }
   }
@@ -55,10 +52,10 @@ $primary-color: #333136;
     &--footer {
       .routes-list__item-route {
         .item-route__router-link {
-          color: #ffffff;
+          color: $secondary-color;
 
           &--active {
-            color: #e7826b;
+            color: $color-router-active-header;
           }
         }
       }
@@ -67,11 +64,11 @@ $primary-color: #333136;
 
   .routes-list__item-route {
     .item-route__router-link {
-      color: $primary-color;
+      color: $third-color;
       font-size: 0.875rem;
 
       &--active {
-        color: #a54439;
+        color: $color-router-active-footer;
       }
     }
   }
