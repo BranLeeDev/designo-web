@@ -35,21 +35,20 @@
   width: 90%;
 
   .container-data__container {
-    display: flex;
-    flex-direction: column;
+    @include flex-col-center();
     gap: 1em;
 
     .container__title {
       $clamp-size: clamp(2rem, -0.909rem + 14.545vw, 2.5rem);
       @include typography($secondary-color, $clamp-size, 1, center);
       font-weight: map-get($weights, "medium");
+      max-width: 7em;
     }
 
     .container__description {
-      position: relative;
-      z-index: 5;
       @include typography($secondary-color, 1rem, 1.63, center);
       font-weight: map-get($weights, "regular");
+      width: min(100%, 27em);
     }
   }
 
@@ -74,13 +73,6 @@
 
     .container-data__container {
       @include flex-col-center();
-      .container__title {
-        width: 42%;
-      }
-
-      .container__description {
-        width: 68%;
-      }
     }
   }
 
@@ -109,7 +101,6 @@
 
       .container__description {
         text-align: start;
-        width: 57%;
       }
     }
   }
