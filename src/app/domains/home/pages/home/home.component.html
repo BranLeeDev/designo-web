@@ -1,21 +1,29 @@
 <section class="section section--home">
   <div class="section__container-data">
-    <app-introducing />
+      <app-introducing />
     <div class="container-data__cards-list">
-      <ul class="cards-list__portfolio-list" id="about">
-        @for (portfolioCard of portfoliosList(); track portfolioCard.id) {
-          <li class="portfolio-list__portfolio-card">
-            <app-portfolio-card [portfolioCard]="portfolioCard" />
-          </li>
-        }
-      </ul>
-      <ul class="cards-list__cultures-list">
-        @for (cultureCard of culturesList(); track cultureCard.id) {
-          <li class="cultures-list__culture-card">
-            <app-culture-card [cultureCard]="cultureCard" />
-          </li>
-        }
-      </ul>
+      @defer (on viewport; prefetch on idle) {
+        <ul class="cards-list__portfolio-list" id="about">
+          @for (portfolioCard of portfoliosList(); track portfolioCard.id) {
+            <li class="portfolio-list__portfolio-card">
+              <app-portfolio-card [portfolioCard]="portfolioCard" />
+            </li>
+          }
+        </ul>
+      } @placeholder {
+        <p>The list of portfolios is loading...</p>
+      }
+      @defer (on viewport; prefetch on idle) {
+        <ul class="cards-list__cultures-list">
+          @for (cultureCard of culturesList(); track cultureCard.id) {
+            <li class="cultures-list__culture-card">
+              <app-culture-card [cultureCard]="cultureCard" />
+            </li>
+          }
+        </ul>
+      } @placeholder {
+        <p>The list of cultures is loading...</p>
+      }
     </div>
   </div>
 </section>

@@ -53,6 +53,8 @@
   }
 
   .container-data__button {
+    position: relative;
+    z-index: 5;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -63,7 +65,6 @@
     @include typography($third-color, 0.9375rem, 1, center);
     font-weight: map-get($weights, "medium");
     letter-spacing: 1px;
-    text-transform: uppercase;
   }
 }
 

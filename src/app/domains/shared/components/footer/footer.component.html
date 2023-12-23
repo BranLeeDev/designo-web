@@ -1,37 +1,41 @@
-<footer class="footer">
-  <div class="footer__container">
-    <div class="container__navigation">
-      <app-web-logo [isForHeader]="false" />
-      <div class="navigation__line"></div>
-      <app-routes-list [isForHeader]="false" />
-    </div>
-    <div class="container__line">
+@defer (on viewport; prefetch on idle) {
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="container__navigation">
+        <app-web-logo [isForHeader]="false" />
+        <div class="navigation__line"></div>
+        <app-routes-list [isForHeader]="false" />
+      </div>
+      <div class="container__line">
 
+      </div>
+      <div class="container__info">
+        <address class="info__address info__address--direction">
+          <strong class="address__title">Designo Central Office</strong><br />
+          3886 Wellington Street <br />
+          Toronto, Ontario M9C 3J5
+        </address>
+        <address class="info__address info__address--contact">
+          <strong>Contact Us (Central Office)</strong><br />
+          P : +1 253-863-8967<br />
+          M : contact&#64;designo.co
+        </address>
+        <ul class="info__social-list">
+          @for (socialMedia of socialMediaList(); track socialMedia.id) {
+            <li class="social-list__social-media">
+              <a
+                class="social-media__link scale-transition txt-coral-hov"
+                [href]="socialMedia.url"
+                [ariaLabel]="socialMedia.label"
+              >
+                <i class="link__icon" [class]="'fa-brands fa-' + socialMedia.icon"></i>
+              </a>
+            </li>
+          }
+        </ul>
+      </div>
     </div>
-    <div class="container__info">
-      <address class="info__address info__address--direction">
-        <strong class="address__title">Designo Central Office</strong><br />
-        3886 Wellington Street <br />
-        Toronto, Ontario M9C 3J5
-      </address>
-      <address class="info__address info__address--contact">
-        <strong>Contact Us (Central Office)</strong><br />
-        P : +1 253-863-8967<br />
-        M : contact&#64;designo.co
-      </address>
-      <ul class="info__social-list">
-        @for (socialMedia of socialMediaList(); track socialMedia.id) {
-          <li class="social-list__social-media">
-            <a
-              class="social-media__link scale-transition txt-coral-hov"
-              [href]="socialMedia.url"
-              [ariaLabel]="socialMedia.label"
-            >
-              <i class="link__icon" [class]="'fa-brands fa-' + socialMedia.icon"></i>
-            </a>
-          </li>
-        }
-      </ul>
-    </div>
-  </div>
-</footer>
+  </footer>
+} @placeholder {
+  <p>Footer is loading...</p>
+}
