@@ -14,6 +14,32 @@ export const routes: Routes = [
           ),
       },
       {
+        path: 'portfolio',
+        children: [
+          {
+            path: 'web-design',
+            loadComponent: () =>
+              import(
+                './domains/home/pages/web-design/web-design.component'
+              ).then((m) => m.WebDesignComponent),
+          },
+          {
+            path: 'app-design',
+            loadComponent: () =>
+              import(
+                './domains/home/pages/app-design/app-design.component'
+              ).then((m) => m.AppDesignComponent),
+          },
+          {
+            path: 'graphic-design',
+            loadComponent: () =>
+              import(
+                './domains/home/pages/graphic-design/graphic-design.component'
+              ).then((m) => m.GraphicDesignComponent),
+          },
+        ],
+      },
+      {
         path: 'our-company',
         loadComponent: () =>
           import(

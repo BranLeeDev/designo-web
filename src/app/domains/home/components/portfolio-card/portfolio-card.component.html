@@ -1,6 +1,6 @@
-<article class="portfolio-card scale-up">
+<article class="portfolio-card scale-up" [routerLink]="portfolioCard.path">
   <h3 class="portfolio-card__title">{{ portfolioCard.title }}</h3>
-  <a class="portfolio-card__link slide-right-transition" href="/">
+  <a class="portfolio-card__link slide-right-transition" [routerLink]="portfolioCard.path">
     <span class="link__name">View Projects</span>
     <i class="fa-solid fa-chevron-right link__icon"></i>
   </a>

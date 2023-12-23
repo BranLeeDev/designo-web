@@ -27,6 +27,7 @@ export class HomeComponent implements OnInit {
     {
       id: 1,
       title: 'Web Design',
+      path: '/portfolio/web-design',
       images: {
         mobile:
           'https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/DesignoWeb/Home/portfolio-card/mobile/jpijmm8hi0de8vpzktfo',
@@ -40,6 +41,7 @@ export class HomeComponent implements OnInit {
     {
       id: 2,
       title: 'App Design',
+      path: '/portfolio/app-design',
       images: {
         mobile:
           'https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/DesignoWeb/Home/portfolio-card/mobile/nrsndmdzusbbqyilda5s',
@@ -53,6 +55,7 @@ export class HomeComponent implements OnInit {
     {
       id: 3,
       title: 'Graphic Design',
+      path: '/portfolio/graphic-design',
       images: {
         mobile:
           'https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/DesignoWeb/Home/portfolio-card/mobile/u06nwndqqmk1ll5kxblx',

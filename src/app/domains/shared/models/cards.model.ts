@@ -15,10 +15,11 @@ export interface Image {
 export interface PortfolioCard {
   id: number;
   title: string;
+  path: string;
   images: ResponsiveImages;
 }
 
-export interface CultureCard extends Omit<PortfolioCard, 'images'> {
+export interface CultureCard extends Omit<PortfolioCard, 'images' | 'path'> {
   description: string;
   image: Image;
 }
