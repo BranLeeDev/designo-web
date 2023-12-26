@@ -1,10 +1,13 @@
-<article>
-  <h3>{{projectCard.title}}</h3>
-  <p>{{projectCard.description}}</p>
+<article class="project">
   <img
+    class="project__image"
     [ngSrc]="projectCard.image.url"
     [width]="projectCard.image.width"
     [height]="projectCard.image.height"
     [alt]="projectCard.image.alt"
   />
+  <div class="project__container-data">
+    <h3 class="project__title">{{projectCard.title}}</h3>
+    <p class="project__description">{{projectCard.description}}</p>
+  </div>
 </article>

@@ -5,6 +5,7 @@ import { ProjectIntroComponent } from '../../components/project-intro/project-in
 import { ProjectIntro } from '@models/project-intro.model';
 import { PortfolioCard } from '@models/cards.model';
 import { PortfolioCardComponent } from '../../components/portfolio-card/portfolio-card.component';
+import { TalkCardComponent } from '../../../shared/components/talk-card/talk-card.component';
 
 @Component({
   selector: 'app-graphic-design',
@@ -13,6 +14,7 @@ import { PortfolioCardComponent } from '../../components/portfolio-card/portfoli
     ProjectCardComponent,
     ProjectIntroComponent,
     PortfolioCardComponent,
+    TalkCardComponent,
   ],
   templateUrl: './graphic-design.component.html',
   styleUrl: './graphic-design.component.scss',

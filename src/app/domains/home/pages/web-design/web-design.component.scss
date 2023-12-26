@@ -3,10 +3,22 @@
 
 .section {
   @include flex-col-center();
+  gap: 6em;
 
   app-project-intro {
     @include flex-col-center();
     width: 100%;
+  }
+
+  .section__projects-list {
+    @include flex-col-center();
+    gap: 2.5em;
+    width: 90%;
+    max-width: $max-width;
+
+    .projects-list__project-card {
+      width: 100%;
+    }
   }
 
   .section__portfolio-list {
@@ -16,10 +28,29 @@
     width: 90%;
     max-width: $max-width;
   }
+
+  app-talk-card {
+    width: 100%;
+  }
+}
+
+@media screen and (width >= $breakpoint-tablet) {
+  .section {
+    gap: 7.5em;
+  }
 }
 
 @media screen and (width >= $breakpoint-desktop) {
   .section {
+    gap: 10em;
+    .section__projects-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min-content, 21.813em));
+      grid-template-rows: 29.875em;
+      justify-content: space-between;
+      gap: 2em;
+    }
+
     .section__portfolio-list {
       flex-direction: row;
       gap: 1.875em;

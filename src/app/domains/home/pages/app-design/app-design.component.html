@@ -1,12 +1,12 @@
 <section class="section section--app-design">
   <app-project-intro [projectIntro]="projectIntro()" />
-  <!-- <ul>
+  <ul class="section__projects-list">
     @for (projectCard of projectsList(); track projectCard.id) {
-      <li>
+      <li class="projects-list__project-card">
         <app-project-card [projectCard]="projectCard" />
       </li>
     }
-  </ul> -->
+  </ul>
   <ul class="section__portfolio-list" >
     @for (portfolioCard of portfoliosList(); track portfolioCard.id) {
       <li class="portfolio-list__portfolio-card">
@@ -14,4 +14,5 @@
       </li>
     }
   </ul>
+  <app-talk-card [hasBackground]="true" />
 </section>
