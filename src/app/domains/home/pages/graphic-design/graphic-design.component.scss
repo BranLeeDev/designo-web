@@ -1,0 +1,33 @@
+@import "../../../../../styles/bases/variables.scss";
+@import "../../../../../styles/bases/mixins.scss";
+
+.section {
+  @include flex-col-center();
+
+  app-project-intro {
+    @include flex-col-center();
+    width: 100%;
+  }
+
+  .section__portfolio-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    width: 90%;
+    max-width: $max-width;
+  }
+}
+
+@media screen and (width >= $breakpoint-desktop) {
+  .section {
+    .section__portfolio-list {
+      flex-direction: row;
+      gap: 1.875em;
+
+      .portfolio-list__portfolio-card {
+        width: 33.8125em;
+        height: 19.25em;
+      }
+    }
+  }
+}

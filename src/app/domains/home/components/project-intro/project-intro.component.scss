@@ -7,7 +7,6 @@
   max-width: $max-width;
   padding: 6.5625em 0;
   margin-top: 1.875em;
-  border-radius: 0.9375em;
   background-color: $primary-color;
   overflow: hidden;
 
@@ -34,6 +33,7 @@
   .project-intro {
     width: 90%;
     padding: 3.8em 0;
+    border-radius: 0.9375em;
 
     .project-intro__container {
       .project-intro__description {

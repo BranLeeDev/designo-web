@@ -1,7 +1,7 @@
 @import "../../../../../styles/bases/variables.scss";
 @import "../../../../../styles/bases/mixins.scss";
 
-.section--web-design {
+.section {
   @include flex-col-center();
 
   app-project-intro {
@@ -19,7 +19,7 @@
 }
 
 @media screen and (width >= $breakpoint-desktop) {
-  .section--web-design {
+  .section {
     .section__portfolio-list {
       flex-direction: row;
       gap: 1.875em;
