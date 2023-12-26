@@ -1,4 +1,4 @@
-<section>
+<section class="section section--web-design">
   <app-project-intro [projectIntro]="projectIntro()" />
   <ul>
     @for (projectCard of projectsList(); track projectCard.id) {
@@ -7,7 +7,6 @@
       </li>
     }
   </ul>
-
   <ul class="cards-list__portfolio-list" >
     @for (portfolioCard of portfoliosList(); track portfolioCard.id) {
       <li class="portfolio-list__portfolio-card">

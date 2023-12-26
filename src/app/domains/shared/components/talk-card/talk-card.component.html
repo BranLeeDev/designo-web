@@ -1,10 +1,11 @@
 @defer (on viewport; prefetch on idle) {
   <div class="container-talk-card" [class.container-talk-card--active]="hasBackground">
     <section class="talk-card">
+      <app-background-oval />
       <div class="talk-card__container-data">
-        <div class="container-data__container oval small-oval-after--third">
-          <h2 class="container__title small-oval-before--first">Let’s talk about your project</h2>
-          <p class="container__description small-oval-before--second">
+        <div class="container-data__container">
+          <h2 class="container__title">Let’s talk about your project</h2>
+          <p class="container__description">
             Ready to take it to the next level? Contact us today and find out how our
             expertise can help your business grow.
           </p>

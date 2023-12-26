@@ -1,0 +1,44 @@
+@import "../../../../../styles/bases/variables.scss";
+@import "../../../../../styles/bases/mixins.scss";
+
+.project-intro {
+  @include flex-col-center();
+  width: 100%;
+  max-width: $max-width;
+  padding: 6.5625em 0;
+  margin-top: 1.875em;
+  border-radius: 0.9375em;
+  background-color: $primary-color;
+  overflow: hidden;
+
+  .project-intro__container {
+    @include flex-col-center();
+    gap: 1.5em;
+    width: 90%;
+    max-width: 25em;
+
+    .project-intro__title {
+      $font-size: clamp(2rem, 1.286rem + 3.571vw, 3rem);
+      @include typography($secondary-color, $font-size, 1.13, center);
+      font-weight: map-get($weights, "medium");
+    }
+
+    .project-intro__description {
+      @include typography($secondary-color, 0.9375rem, 1.67, center);
+      font-weight: map-get($weights, "regular");
+    }
+  }
+}
+
+@media screen and (width >= $breakpoint-tablet) {
+  .project-intro {
+    width: 90%;
+    padding: 3.8em 0;
+
+    .project-intro__container {
+      .project-intro__description {
+        font-size: 1rem;
+      }
+    }
+  }
+}

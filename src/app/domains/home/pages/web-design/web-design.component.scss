@@ -1,0 +1,9 @@
+@import "../../../../../styles/bases/variables.scss";
+@import "../../../../../styles/bases/mixins.scss";
+
+.section--web-design {
+  app-project-intro {
+    @include flex-col-center();
+    width: 100%;
+  }
+}
