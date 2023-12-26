@@ -1,1 +1,17 @@
-<p>graphic-design works!</p>
+<section>
+  <app-project-intro [projectIntro]="projectIntro()" />
+  <ul>
+    @for (projectCard of projectsList(); track projectCard.id) {
+      <li>
+        <app-project-card [projectCard]="projectCard" />
+      </li>
+    }
+  </ul>
+  <ul class="cards-list__portfolio-list" >
+    @for (portfolioCard of portfoliosList(); track portfolioCard.id) {
+      <li class="portfolio-list__portfolio-card">
+        <app-portfolio-card [portfolioCard]="portfolioCard" />
+      </li>
+    }
+  </ul>
+</section>

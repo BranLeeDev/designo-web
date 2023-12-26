@@ -1,0 +1,10 @@
+<article>
+  <h3>{{projectCard.title}}</h3>
+  <p>{{projectCard.description}}</p>
+  <img
+    [ngSrc]="projectCard.image.url"
+    [width]="projectCard.image.width"
+    [height]="projectCard.image.height"
+    [alt]="projectCard.image.alt"
+  />
+</article>
