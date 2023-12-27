@@ -1,0 +1,25 @@
+<section>
+  <div>
+    <h2>{{ infoSectionCard.title }}</h2>
+    @if (infoSectionCard.hasTwoParagraphs) {
+      <div>
+        <p>
+          {{ infoSectionCard.paragraphOne }}
+        </p>
+        <p>
+          {{ infoSectionCard.paragraphTwo }}
+        </p>
+      </div>
+      } @else {
+      <p>
+        {{ infoSectionCard.paragraphOne }}
+      </p>
+    }
+  </div>
+  <img
+    [ngSrc]="infoSectionCard.image.url"
+    [alt]="infoSectionCard.image.alt"
+    [width]="infoSectionCard.image.width"
+    [height]="infoSectionCard.image.height"
+  />
+</section>
