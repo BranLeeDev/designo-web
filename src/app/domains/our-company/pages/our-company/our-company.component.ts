@@ -4,11 +4,12 @@ import { MetatagsService } from '@services/metatags.service';
 import { LocationsListComponent } from '../../../shared/components/locations-list/locations-list.component';
 import { SectionCardComponent } from '../../components/section-card/section-card.component';
 import { SectionCard } from '@models/section-card.model';
+import { TalkCardComponent } from '../../../shared/components/talk-card/talk-card.component';
 
 @Component({
   selector: 'app-our-company',
   standalone: true,
-  imports: [LocationsListComponent, SectionCardComponent],
+  imports: [LocationsListComponent, SectionCardComponent, TalkCardComponent],
   templateUrl: './our-company.component.html',
   styleUrl: './our-company.component.scss',
 })

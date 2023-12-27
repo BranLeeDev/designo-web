@@ -18,6 +18,7 @@
 
     .projects-list__project-card {
       width: 100%;
+      height: 100%;
     }
   }
 
@@ -28,21 +29,28 @@
     width: 90%;
     max-width: $max-width;
   }
+}
 
-  app-talk-card {
-    width: 100%;
-  }
+app-talk-card {
+  display: inline-flex;
+  width: 100%;
+  margin-top: 6em;
 }
 
 @media screen and (width >= $breakpoint-tablet) {
   .section {
     gap: 7.5em;
   }
+
+  app-talk-card {
+    margin-top: 7.5em;
+  }
 }
 
 @media screen and (width >= $breakpoint-desktop) {
   .section {
     gap: 10em;
+
     .section__projects-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(min-content, 21.813em));
@@ -60,5 +68,9 @@
         height: 19.25em;
       }
     }
+  }
+
+  app-talk-card {
+    margin-top: 10em;
   }
 }
