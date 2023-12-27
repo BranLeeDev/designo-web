@@ -1,11 +1,12 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { MetatagsService } from '@services/metatags.service';
+import { LocationsListComponent } from '../../../shared/components/locations-list/locations-list.component';
 
 @Component({
   selector: 'app-our-company',
   standalone: true,
-  imports: [],
+  imports: [LocationsListComponent],
   templateUrl: './our-company.component.html',
   styleUrl: './our-company.component.scss',
 })

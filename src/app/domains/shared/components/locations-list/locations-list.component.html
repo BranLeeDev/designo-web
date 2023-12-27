@@ -1,0 +1,20 @@
+<ul class="locations-list">
+  @for (location of locationsList(); track location.id) {
+    <li class="locations-list__location" >
+      <article [className]="'location__article location__article--' + location.country.toLocaleLowerCase().split(' ').join('-')">
+        <div class="article__container-image">
+            <span class="article__oval"></span>
+            <img
+            class="article__image"
+            [ngSrc]="location.image.url"
+            [alt]="location.image.alt"
+            [width]="location.image.width"
+            [height]="location.image.height"
+          >
+        </div>
+        <h3 class="article__country">{{location.country}}</h3>
+        <a class="article__button slide-in-transition" [routerLink]="location.path">SEE LOCATION</a>
+      </article>
+    </li>
+  }
+</ul>

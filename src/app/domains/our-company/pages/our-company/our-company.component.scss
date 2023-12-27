@@ -1,0 +1,5 @@
+@import "../../../../../styles/bases/mixins.scss";
+
+app-locations-list {
+  @include flex-col-center();
+}
