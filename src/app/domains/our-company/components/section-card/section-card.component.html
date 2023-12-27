@@ -1,25 +1,31 @@
-<section>
-  <div>
-    <h2>{{ infoSectionCard.title }}</h2>
-    @if (infoSectionCard.hasTwoParagraphs) {
-      <div>
-        <p>
-          {{ infoSectionCard.paragraphOne }}
-        </p>
-        <p>
-          {{ infoSectionCard.paragraphTwo }}
-        </p>
-      </div>
-      } @else {
-      <p>
-        {{ infoSectionCard.paragraphOne }}
-      </p>
-    }
-  </div>
+<section class="section-card" [ngClass]="{
+  'section-card--right': infoSectionCard.isImageRightAligned === true,
+  'section-card--left': infoSectionCard.isImageRightAligned === false,
+  'section-card--pk-color': infoSectionCard.isSecondaryColor === false,
+  'section-card--sec-color': infoSectionCard.isSecondaryColor === true
+}">
   <img
+    class="section-card__image"
     [ngSrc]="infoSectionCard.image.url"
     [alt]="infoSectionCard.image.alt"
     [width]="infoSectionCard.image.width"
     [height]="infoSectionCard.image.height"
   />
+  <div class="section-card__container-data">
+    <h2 class="section-card__title">{{ infoSectionCard.title }}</h2>
+    @if (infoSectionCard.hasTwoParagraphs) {
+      <div class="section-card__container-paragraphs">
+        <p class="container-paragraphs__paragraph-one section-card__paragraph">
+          {{ infoSectionCard.paragraphOne }}
+        </p>
+        <p class="container-paragraphs__paragraph-two section-card__paragraph">
+          {{ infoSectionCard.paragraphTwo }}
+        </p>
+      </div>
+      } @else {
+      <p class="section-card__paragraph">
+        {{ infoSectionCard.paragraphOne }}
+      </p>
+    }
+  </div>
 </section>

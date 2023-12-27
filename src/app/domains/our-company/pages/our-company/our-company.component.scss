@@ -1,5 +1,48 @@
 @import "../../../../../styles/bases/mixins.scss";
+@import "../../../../../styles/bases/variables.scss";
 
-app-locations-list {
-  @include flex-col-center();
+.our-company {
+  display: flex;
+  flex-direction: column;
+  gap: 7.5em;
+  margin-top: 1.875em;
+
+  .our-company__first-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .our-company__section {
+    .section__title {
+      @include sr-only();
+    }
+  }
+
+  app-locations-list {
+    @include flex-col-center();
+    width: 100%;
+  }
+
+  app-section-card {
+    @include flex-col-center();
+    width: 100%;
+  }
+}
+
+@media screen and (width >= $breakpoint-tablet) {
+  .our-company {
+    .our-company__first-container {
+      gap: 7.5rem;
+    }
+  }
+}
+
+@media screen and (width >= $breakpoint-desktop) {
+  .our-company {
+    gap: 10em;
+
+    .our-company__first-container {
+      gap: 10em;
+    }
+  }
 }

@@ -1,11 +1,15 @@
-import { NgOptimizedImage, provideCloudinaryLoader } from '@angular/common';
+import {
+  NgClass,
+  NgOptimizedImage,
+  provideCloudinaryLoader,
+} from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { SectionCard } from '@models/section-card.model';
 
 @Component({
   selector: 'app-section-card',
   standalone: true,
-  imports: [NgOptimizedImage],
+  imports: [NgOptimizedImage, NgClass],
   templateUrl: './section-card.component.html',
   styleUrl: './section-card.component.scss',
   providers: [provideCloudinaryLoader('https://res.cloudinary.com/dbbixakcl')],

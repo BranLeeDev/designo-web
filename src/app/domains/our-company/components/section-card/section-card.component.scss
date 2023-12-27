@@ -1,0 +1,104 @@
+@import "../../../../../styles/bases/variables.scss";
+@import "../../../../../styles/bases/mixins.scss";
+
+.section-card {
+  @include flex-col-center();
+  gap: 5em;
+  width: 100%;
+  max-width: $max-width;
+  overflow: hidden;
+
+  .section-card__image {
+    width: 100%;
+    max-height: 20em;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .section-card__container-data {
+    @include flex-col-center();
+    gap: 1.5em;
+    width: 90%;
+    padding-bottom: 6.5625em;
+
+    .section-card__title {
+      @include typography($secondary-color, 2rem, 1.125, center);
+      font-weight: map-get($weights, "medium");
+    }
+
+    .section-card__container-paragraphs {
+      @include flex-col-center();
+      gap: 1.5em;
+    }
+
+    .section-card__paragraph {
+      @include typography($secondary-color, 0.9375rem, 1.667, center);
+      font-weight: map-get($weights, "regular");
+    }
+  }
+
+  &--pk-color {
+    background-color: $primary-color;
+  }
+
+  &--sec-color {
+    background-color: $bg-project-card;
+
+    .section-card__container-data {
+      .section-card__title {
+        color: $primary-color;
+      }
+
+      .section-card__paragraph {
+        color: $third-color;
+      }
+    }
+  }
+}
+
+@media screen and (width >= $breakpoint-tablet) {
+  .section-card {
+    width: 90%;
+    border-radius: 0.9375em;
+  }
+}
+
+@media screen and (width >= $breakpoint-desktop) {
+  .section-card {
+    gap: 0;
+
+    .section-card__image {
+      max-height: 45em;
+    }
+
+    .section-card__container-data {
+      align-items: flex-start;
+
+      .section-card__paragraph {
+        text-align: start;
+      }
+    }
+
+    &--pk-color {
+      max-height: 30em;
+
+      .section-card__container-data {
+        padding: 8.4375em 5.9375em;
+      }
+    }
+
+    &--sec-color {
+      .section-card__container-data {
+        padding: 9.625em 5.9375em;
+      }
+    }
+
+    &--right {
+      flex-direction: row-reverse;
+    }
+
+    &--left {
+      flex-direction: row;
+    }
+  }
+}

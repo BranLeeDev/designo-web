@@ -1,8 +1,12 @@
-<app-section-card [infoSectionCard]="aboutUsCard()" />
-<app-section-card [infoSectionCard]="classTalentCard()" />
-<section>
-  <h2>Locations</h2>
-  <app-locations-list />
-</section>
-<app-section-card [infoSectionCard]="realDealCard()" />
-<app-talk-card [hasBackground]="true" />
+<div class="our-company">
+  <div class="our-company__first-container">
+    <app-section-card [infoSectionCard]="aboutUsCard()" />
+    <app-section-card [infoSectionCard]="classTalentCard()" />
+  </div>
+  <section class="our-company__section">
+    <h2 class="section__title">Locations</h2>
+    <app-locations-list />
+  </section>
+  <app-section-card [infoSectionCard]="realDealCard()" />
+  <app-talk-card [hasBackground]="true" />
+</div>
