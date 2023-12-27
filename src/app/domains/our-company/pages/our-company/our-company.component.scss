@@ -5,7 +5,6 @@
   display: flex;
   flex-direction: column;
   gap: 7.5em;
-  margin-top: 1.875em;
 
   .our-company__first-container {
     display: flex;
@@ -31,6 +30,8 @@
 
 @media screen and (width >= $breakpoint-tablet) {
   .our-company {
+    margin-top: 1.875em;
+
     .our-company__first-container {
       gap: 7.5rem;
     }
