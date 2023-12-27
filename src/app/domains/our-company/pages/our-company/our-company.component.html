@@ -3,10 +3,18 @@
     <app-section-card [infoSectionCard]="aboutUsCard()" />
     <app-section-card [infoSectionCard]="classTalentCard()" />
   </div>
-  <section class="our-company__section">
-    <h2 class="section__title">Locations</h2>
-    <app-locations-list />
-  </section>
-  <app-section-card [infoSectionCard]="realDealCard()" />
+  @defer (on viewport; prefetch on idle) {
+    <section class="our-company__section">
+      <h2 class="section__title">Locations</h2>
+      <app-locations-list />
+    </section>
+  } @placeholder {
+    <p>Locations is loading...</p>
+  }
+  @defer (on viewport; prefetch on idle) {
+    <app-section-card [infoSectionCard]="realDealCard()" />
+  } @placeholder {
+    <p>The section real deal is loading...</p>
+  }
   <app-talk-card [hasBackground]="true" />
 </div>
