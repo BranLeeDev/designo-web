@@ -1,11 +1,12 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { MetatagsService } from '@services/metatags.service';
+import { LocationMapComponent } from '../../components/location-map/location-map.component';
 
 @Component({
   selector: 'app-locations',
   standalone: true,
-  imports: [],
+  imports: [LocationMapComponent],
   templateUrl: './locations.component.html',
   styleUrl: './locations.component.scss',
 })
