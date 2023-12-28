@@ -1,4 +1,11 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  Input,
+  ViewChild,
+} from '@angular/core';
+import { Cords } from '@models/cords.model';
 import { Map, tileLayer } from 'leaflet';
 
 @Component({
@@ -9,11 +16,13 @@ import { Map, tileLayer } from 'leaflet';
   styleUrl: './location-map.component.scss',
 })
 export class LocationMapComponent implements AfterViewInit {
+  @Input({ required: true }) cords!: Cords;
+
   @ViewChild('map') mapRef!: ElementRef;
 
   ngAfterViewInit(): void {
     const map = new Map(this.mapRef.nativeElement).setView(
-      [43.712612417333915, -79.2494427613216],
+      [this.cords.latitude, this.cords.longitude],
       13
     );
 
