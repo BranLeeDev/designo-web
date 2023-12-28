@@ -1,0 +1,27 @@
+<section
+  class="location-card"
+  [ngClass]="{
+    'location-card--right': locationCard.isImageRightAligned === true,
+    'location-card--left': locationCard.isImageRightAligned === false
+  }"
+>
+  <app-location-map [coords]="locationCard.coords" />
+  <div class="location-card__container-data">
+    <h2 class="location-card__title">
+      {{ locationCard.countryName }}
+    </h2>
+    <div class="container-data__container-address">
+      <address class="location-card__address">
+        <strong class="address__title">{{ locationCard.office.name }}</strong
+        ><br />
+        {{ locationCard.office.street }} <br />
+        {{ locationCard.office.state }} {{ locationCard.office.postalCode }}
+      </address>
+      <address class="location-card__address">
+        <strong class="address__title">Contact</strong><br />
+        P : {{ locationCard.contact.phoneNumber }}<br />
+        M : {{ locationCard.contact.email }}
+      </address>
+    </div>
+  </div>
+</section>

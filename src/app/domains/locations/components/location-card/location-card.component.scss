@@ -1,0 +1,94 @@
+@import "../../../../../styles/bases/variables.scss";
+@import "../../../../../styles/bases/mixins.scss";
+
+.location-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: $max-width;
+
+  .location-card__container-data {
+    @include flex-col-center();
+    gap: 1.5em;
+    padding: 5em 0;
+    border-radius: 0.9375em;
+    background-color: $bg-project-card;
+
+    .container-data__container-address {
+      @include flex-col-center();
+      gap: 1.5em;
+      width: 100%;
+    }
+  }
+
+  .location-card__title {
+    @include typography($primary-color, 2rem, 1.125, center);
+    font-weight: map-get($weights, "medium");
+  }
+
+  .location-card__address {
+    @include typography($third-color, 0.9375rem, 1.667, center);
+    font-weight: map-get($weights, "regular");
+    font-style: normal;
+
+    .address__title {
+      font-weight: map-get($weights, "bold");
+    }
+  }
+}
+
+@media screen and (width >= $breakpoint-tablet) {
+  .location-card {
+    gap: 1.9375em;
+    width: 90%;
+
+    .location-card__container-data {
+      align-items: flex-start;
+      padding: 5.5em 10.8%;
+
+      .container-data__container-address {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1.875em;
+      }
+    }
+
+    .location-card__title,
+    .location-card__address {
+      text-align: start;
+    }
+
+    .location-card__title {
+      font-size: 2.5rem;
+    }
+
+    .location-card__address {
+      width: 50%;
+      font-size: 1rem;
+    }
+  }
+}
+
+@media screen and (width >= $breakpoint-desktop) {
+  .location-card {
+    max-height: 20.375em;
+
+    .location-card__container-data {
+      width: 65%;
+      padding: 5.5em 8.5%;
+    }
+
+    app-location-map {
+      width: 21.875em;
+      height: 20.375em;
+    }
+
+    &--right {
+      flex-direction: row-reverse;
+    }
+
+    &--left {
+      flex-direction: row;
+    }
+  }
+}

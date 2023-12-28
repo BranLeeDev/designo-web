@@ -5,7 +5,7 @@ import {
   Input,
   ViewChild,
 } from '@angular/core';
-import { Cords } from '@models/cords.model';
+import { Coords } from '@models/coords.model';
 import { Map, tileLayer } from 'leaflet';
 
 @Component({
@@ -16,13 +16,13 @@ import { Map, tileLayer } from 'leaflet';
   styleUrl: './location-map.component.scss',
 })
 export class LocationMapComponent implements AfterViewInit {
-  @Input({ required: true }) cords!: Cords;
+  @Input({ required: true }) coords!: Coords;
 
   @ViewChild('map') mapRef!: ElementRef;
 
   ngAfterViewInit(): void {
     const map = new Map(this.mapRef.nativeElement).setView(
-      [this.cords.latitude, this.cords.longitude],
+      [this.coords.latitude, this.coords.longitude],
       13
     );
 

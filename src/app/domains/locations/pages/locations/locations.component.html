@@ -1,5 +1,6 @@
 <div>
-  <app-location-map [cords]="canadaCords()" />
-  <app-location-map [cords]="australiaCords()" />
-  <app-location-map [cords]="unitedKingdomCords()" />
+  @for (locationCard of locationsCardList(); track locationCard.id) {
+    <app-location-card [locationCard]="locationCard" />
+  }
 </div>
+<app-talk-card [hasBackground]="true" />

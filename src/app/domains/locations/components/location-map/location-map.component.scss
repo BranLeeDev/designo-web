@@ -1,4 +1,15 @@
+@import "../../../../../styles/bases/variables.scss";
+
 #main-map {
-  width: 30em;
-  height: 20em;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  min-height: 27.16em;
+  height: 100%;
+}
+
+@media screen and (width >= $breakpoint-tablet) {
+  #main-map {
+    border-radius: 1.25em;
+  }
 }
