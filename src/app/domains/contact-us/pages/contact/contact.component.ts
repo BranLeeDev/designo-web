@@ -1,11 +1,13 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { MetatagsService } from '@services/metatags.service';
+import { LocationsListComponent } from '../../../shared/components/locations-list/locations-list.component';
+import { FormComponent } from '../../components/form/form.component';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [],
+  imports: [LocationsListComponent, FormComponent],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })

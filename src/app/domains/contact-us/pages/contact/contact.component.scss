@@ -1,0 +1,100 @@
+@import "../../../../../styles/bases/variables.scss";
+@import "../../../../../styles/bases/mixins.scss";
+
+.section--contact {
+  @include flex-col-center();
+  width: 100%;
+  max-width: $max-width;
+  padding: 4.5em 0;
+  margin: 0 auto;
+  margin-bottom: 7.5em;
+  background-color: $primary-color;
+
+  .section__container-data {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    width: 90%;
+
+    .container-data__container-text {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5em;
+      width: 100%;
+    }
+  }
+
+  .section__title {
+    @include typography($secondary-color, 2rem, 1.125, center);
+    font-weight: map-get($weights, "medium");
+  }
+
+  .section__paragraph {
+    @include typography($secondary-color, 0.9375rem, 1.667, center);
+    font-weight: map-get($weights, "regular");
+  }
+}
+
+.section--locations {
+  margin-bottom: 7.5em;
+
+  .section__title {
+    @include sr-only();
+  }
+
+  app-locations-list {
+    @include flex-col-center();
+    width: 100%;
+  }
+}
+
+@media screen and (width >= $breakpoint-tablet) {
+  .section--contact {
+    width: 90%;
+    margin-top: 2em;
+    border-radius: 0.9375em;
+
+    .container-data__container-text {
+      align-items: flex-start;
+    }
+
+    .section__title,
+    .section__paragraph {
+      text-align: start;
+    }
+
+    .section__title {
+      font-size: 3rem;
+    }
+
+    .section__paragraph {
+      font-size: 1rem;
+    }
+  }
+
+  .section--locations {
+    margin-bottom: 10em;
+  }
+}
+
+@media screen and (width >= $breakpoint-desktop) {
+  .section--contact {
+    padding: 3.4375em 1em;
+    margin-bottom: 10em;
+
+    .section__container-data {
+      flex-direction: row;
+      align-items: center;
+      gap: 5.9375em;
+
+      app-form {
+        width: 100%;
+      }
+
+      .container-data__container-text {
+        gap: 2em;
+        max-width: 27.812em;
+      }
+    }
+  }
+}

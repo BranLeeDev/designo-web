@@ -12,6 +12,20 @@ button {
   cursor: pointer;
 }
 
+input {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+textarea {
+  border: none;
+  background: none;
+  outline: none;
+  resize: none;
+  overflow: hidden;
+}
+
 ul {
   list-style: none;
 }

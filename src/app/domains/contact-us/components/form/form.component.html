@@ -1,0 +1,98 @@
+<form
+  class="form"
+  [formGroup]="contactForm"
+  (ngSubmit)="submitFormData()"
+  autocomplete="on"
+>
+  <div class="form__container-input">
+    <input
+      class="form__input"
+      type="text"
+      name="name"
+      placeholder="Name"
+      autocomplete="given-name"
+      minlength="3"
+      maxlength="30"
+      formControlName="name"
+      required
+    />
+    @if (contactForm.controls.name.errors?.['minlength']) {
+      <p class="form__error-message">
+        Must be at least 3 characters
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <circle cx="10" cy="10" r="10" fill="white"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M11 5H9V12H11V5ZM11 14H9V16H11V14Z" fill="#E7816B"/>
+        </svg>
+      </p>
+    } @else if (contactForm.controls.name.errors?.['maxLength']) {
+      <p class="form__error-message">
+        Can't exceed 30 characters
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <circle cx="10" cy="10" r="10" fill="white"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M11 5H9V12H11V5ZM11 14H9V16H11V14Z" fill="#E7816B"/>
+        </svg>
+      </p>
+    }
+  </div>
+  <div class="form__container-input">
+    <input
+      class="form__input"
+      type="email"
+      name="email"
+      minlength="11"
+      maxlength="50"
+      placeholder="Email Address"
+      autocomplete="email"
+      formControlName="email"
+      required
+    />
+    @if (contactForm.controls.email.errors?.['minlength']) {
+      <p class="form__error-message">
+        Must be at least 11 characters
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <circle cx="10" cy="10" r="10" fill="white"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M11 5H9V12H11V5ZM11 14H9V16H11V14Z" fill="#E7816B"/>
+        </svg>
+      </p>
+    } @else if (contactForm.controls.email.errors?.['maxLength']) {
+      <p class="form__error-message">Can't exceed 50 characters</p>
+    } @else if (contactForm.controls.email.errors?.['email']) {
+      <p class="form__error-message">Please enter a valid email address</p>
+    }
+  </div>
+  <div class="form__container-input">
+    <input
+      class="form__input"
+      type="tel"
+      name="phone"
+      minlength="9"
+      maxlength="20"
+      placeholder="Phone"
+      autocomplete="tel"
+      formControlName="phone"
+      required
+    />
+    @if (contactForm.controls.phone.errors?.['minlength']) {
+      <p class="form__error-message">Must be at least 9 characters</p>
+    } @else if (contactForm.controls.phone.errors?.['maxLength']) {
+      <p class="form__error-message">Can't exceed 20 characters</p>
+    }
+  </div>
+  <div class="form__container-input">
+    <textarea
+      class="form__textarea"
+      name="message"
+      placeholder="Your Message"
+      formControlName="message"
+      minlength="15"
+      maxlength="100"
+      required
+    ></textarea>
+    @if (contactForm.controls.message.errors?.['minlength']) {
+      <p class="form__error-message">Must be at least 15 characters</p>
+    } @else if (contactForm.controls.message.errors?.['maxLength']) {
+      <p class="form__error-message">Can't exceed 100 characters</p>
+    }
+  </div>
+  <button class="form__button-input slide-in-transition txt-white-hov" type="submit">SUBMIT</button>
+</form>
