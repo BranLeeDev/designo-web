@@ -6,11 +6,24 @@
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
+  "prefer_related_applications": true,
   "icons": [
+    {
+      "src": "https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/DesignoWeb/kzpkzoyr03feakppldqa",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "maskable any"
+    },
     {
       "src": "https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/DesignoWeb/uvrshkqw1eqriwly95kf",
       "sizes": "256x256",
       "type": "image/ico",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/DesignoWeb/vwmcg9nxfryon36zzfql",
+      "sizes": "512x512",
+      "type": "image/png",
       "purpose": "maskable any"
     }
   ]
