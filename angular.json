@@ -64,8 +64,7 @@
             "prerender": true,
             "ssr": {
               "entry": "server.ts"
-            },
-            "allowedCommonJsDependencies": ["leaflet"]
+            }
           },
           "configurations": {
             "production": {
