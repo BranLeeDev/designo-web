@@ -4,6 +4,7 @@
     'location-card--right': locationCard.isImageRightAligned === true,
     'location-card--left': locationCard.isImageRightAligned === false
   }"
+  [id]="locationCard.countryName.toLocaleLowerCase().split(' ').join('-')"
 >
   <picture class="location-card__picture">
     <source

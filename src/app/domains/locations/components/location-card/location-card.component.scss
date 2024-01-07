@@ -1,6 +1,15 @@
 @import "../../../../../styles/bases/variables.scss";
 @import "../../../../../styles/bases/mixins.scss";
 
+#canada {
+  scroll-margin-top: 8em;
+}
+
+#australia,
+#united-kingdom {
+  scroll-margin-top: 8.5em;
+}
+
 .location-card {
   display: flex;
   flex-direction: column;
@@ -42,6 +51,11 @@
 }
 
 @media screen and (width >= $breakpoint-tablet) {
+  #australia,
+  #united-kingdom {
+    scroll-margin-top: 13em;
+  }
+
   .location-card {
     gap: 1.9375em;
     width: 90%;
@@ -74,6 +88,11 @@
 }
 
 @media screen and (width >= $breakpoint-desktop) {
+  #australia,
+  #united-kingdom {
+    scroll-margin-top: 13em;
+  }
+
   .location-card {
     max-height: 20.375em;
 
