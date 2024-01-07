@@ -18,7 +18,7 @@ $top-side-menu: 6.0031em;
     @include flex-col-center();
     width: 100%;
     padding: 1.96em 0;
-    background-color: red;
+    background-color: $secondary-color;
   }
 }
 
