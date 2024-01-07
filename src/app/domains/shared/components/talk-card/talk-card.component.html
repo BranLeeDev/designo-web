@@ -1,20 +1,23 @@
-@defer (on viewport; prefetch on idle) {
-  <div class="container-talk-card" [class.container-talk-card--active]="hasBackground">
-    <section class="talk-card">
-      <app-background-oval />
-      <div class="talk-card__container-data">
-        <div class="container-data__container">
-          <h2 class="container__title">Let’s talk about your project</h2>
-          <p class="container__description">
-            Ready to take it to the next level? Contact us today and find out how our
-            expertise can help your business grow.
-          </p>
-        </div>
-        <a class="container-data__button slide-in-transition txt-white-hov" routerLink="/contact">GET IN TOUCH</a>
+<div
+  class="container-talk-card"
+  [class.container-talk-card--active]="hasBackground"
+>
+  <section class="talk-card">
+    <app-background-oval />
+    <div class="talk-card__container-data">
+      <div class="container-data__container">
+        <h2 class="container__title">Let’s talk about your project</h2>
+        <p class="container__description">
+          Ready to take it to the next level? Contact us today and find out how
+          our expertise can help your business grow.
+        </p>
       </div>
-    </section>
-    <div class="background-talk-card"></div>
-  </div>
-} @placeholder {
-  <p>Talk card is loading...</p>
-}
+      <a
+        class="container-data__button slide-in-transition txt-white-hov"
+        routerLink="/contact"
+        >GET IN TOUCH</a
+      >
+    </div>
+  </section>
+  <div class="background-talk-card"></div>
+</div>

@@ -1,30 +1,22 @@
 <section class="section section--home">
   <div class="section__container-data">
-      <app-introducing />
+    <app-introducing />
     <div class="container-data__cards-list">
       <ul class="cards-list__portfolio-list" id="about">
         @for (portfolioCard of portfoliosList(); track portfolioCard.id) {
-          <li class="portfolio-list__portfolio-card">
-            <app-portfolio-card [portfolioCard]="portfolioCard" />
-          </li>
+        <li class="portfolio-list__portfolio-card">
+          <app-portfolio-card [portfolioCard]="portfolioCard" />
+        </li>
         }
       </ul>
-      @defer (on viewport; prefetch on idle) {
-        <ul class="cards-list__cultures-list">
-          @for (cultureCard of culturesList(); track cultureCard.id) {
-            <li class="cultures-list__culture-card">
-              <app-culture-card [cultureCard]="cultureCard" />
-            </li>
-          }
-        </ul>
-      } @placeholder {
-        <p>The list of cultures is loading...</p>
-      }
+      <ul class="cards-list__cultures-list">
+        @for (cultureCard of culturesList(); track cultureCard.id) {
+        <li class="cultures-list__culture-card">
+          <app-culture-card [cultureCard]="cultureCard" />
+        </li>
+        }
+      </ul>
     </div>
   </div>
 </section>
-@defer (on viewport; prefetch on idle) {
-  <app-talk-card />
-} @placeholder {
-  <p>Talk card loading...</p>
-}
+<app-talk-card />

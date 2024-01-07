@@ -5,7 +5,19 @@
     'location-card--left': locationCard.isImageRightAligned === false
   }"
 >
-  <img src="" alt="Image map" />
+  <picture class="location-card__picture">
+    <source
+      class="picture__source"
+      [srcset]="locationCard.images.desktop"
+      media="(width >= 90em)"
+    />
+    <img
+      class="location-card__image"
+      [src]="locationCard.images.tablet"
+      loading="lazy"
+      [alt]="locationCard.images.alt"
+    />
+  </picture>
   <div class="location-card__container-data">
     <h2 class="location-card__title">
       {{ locationCard.countryName }}

@@ -30,9 +30,13 @@ export class LocationsComponent implements OnInit {
         phoneNumber: '+1 253-863-8967',
         email: 'contact@designo.co',
       },
-      coords: {
-        latitude: 43.712612417333915,
-        longitude: -79.2494427613216,
+      images: {
+        mobile: '',
+        tablet:
+          'https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/DesignoWeb/Locations/Maps/Tablet/uphhcudjoc1fiwbqxvok',
+        desktop:
+          'https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/DesignoWeb/Locations/Maps/Desktop/u3ddwvpfjqkjlqpg3ylp',
+        alt: 'Image map Canada',
       },
       isImageRightAligned: true,
     },
@@ -49,9 +53,13 @@ export class LocationsComponent implements OnInit {
         phoneNumber: '(02) 6720 9092',
         email: 'contact@designo.au',
       },
-      coords: {
-        latitude: -33.106879403011476,
-        longitude: 151.64518786731207,
+      images: {
+        mobile: '',
+        tablet:
+          'https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/DesignoWeb/Locations/Maps/Tablet/kd3wf0n29atm2kq5bvg4',
+        desktop:
+          'https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/DesignoWeb/Locations/Maps/Desktop/z8k0gvs482qgu5oqsjnf',
+        alt: 'Image map Australia',
       },
       isImageRightAligned: false,
     },
@@ -68,9 +76,13 @@ export class LocationsComponent implements OnInit {
         phoneNumber: '078 3115 1400',
         email: 'contact@designo.uk',
       },
-      coords: {
-        latitude: 53.73477994907449,
-        longitude: -1.3164485045266536,
+      images: {
+        mobile: '',
+        tablet:
+          'https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/DesignoWeb/Locations/Maps/Tablet/yejkk7ynxxl4nwa0mlqi',
+        desktop:
+          'https://res.cloudinary.com/dbbixakcl/image/upload/f_auto,q_auto/v1/DesignoWeb/Locations/Maps/Desktop/lmdlzbo2yasivpc8smku',
+        alt: 'Image map UK',
       },
       isImageRightAligned: true,
     },

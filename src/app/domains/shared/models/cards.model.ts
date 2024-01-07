@@ -1,16 +1,5 @@
-interface ResponsiveImages {
-  mobile: string;
-  tablet: string;
-  desktop: string;
-  alt: string;
-}
-
-export interface Image {
-  url: string;
-  alt: string;
-  width: number;
-  height: number;
-}
+import { Image } from './image.model';
+import { ResponsiveImages } from './responsive-images.model';
 
 export interface PortfolioCard {
   id: number;

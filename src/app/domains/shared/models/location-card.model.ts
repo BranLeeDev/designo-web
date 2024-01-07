@@ -1,4 +1,4 @@
-import { Coords } from './coords.model';
+import { ResponsiveImages } from './responsive-images.model';
 
 export interface LocationCard {
   id: number;
@@ -13,6 +13,6 @@ export interface LocationCard {
     phoneNumber: string;
     email: string;
   };
-  coords: Coords;
+  images: ResponsiveImages;
   isImageRightAligned: boolean;
 }

@@ -7,6 +7,10 @@
   width: 100%;
   max-width: $max-width;
 
+  .location-card__image {
+    width: 100%;
+  }
+
   .location-card__container-data {
     @include flex-col-center();
     gap: 1.5em;
