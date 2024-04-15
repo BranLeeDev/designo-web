@@ -6,6 +6,7 @@ import { CultureCard, PortfolioCard } from '@models/cards.model';
 import { CultureCardComponent } from '../../components/culture-card/culture-card.component';
 import { PortfolioCardComponent } from '../../components/portfolio-card/portfolio-card.component';
 import { TalkCardComponent } from '../../../shared/components/talk-card/talk-card.component';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -106,6 +107,17 @@ export class HomeComponent implements OnInit {
       },
     },
   ]);
+
+  private http = inject(HttpClient);
+
+  constructor() {
+    const res = this.http.get('http://localhost:3000/api/v1/users');
+    res.subscribe({
+      next: (users) => {
+        console.log(users);
+      },
+    });
+  }
 
   ngOnInit(): void {
     const t = 'Designo: Custom designs and digital branding solutions';
