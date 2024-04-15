@@ -111,7 +111,9 @@ export class HomeComponent implements OnInit {
   private http = inject(HttpClient);
 
   constructor() {
-    const res = this.http.get('http://localhost:3000/api/v1/users');
+    const res = this.http.get(
+      'https://task-flow-api-0pfq.onrender.com/api/v1/users'
+    );
     res.subscribe({
       next: (users) => {
         console.log(users);
